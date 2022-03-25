@@ -1,0 +1,16 @@
+.home {
+  background-size: cover;
+}
+
+main section nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+main section nav .navBarButton {
+  height: 5vh;
+  width: 6vh;
+  margin-top: 20px;
+  margin-right: 20px;
+}

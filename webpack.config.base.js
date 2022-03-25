@@ -13,6 +13,7 @@ module.exports = {
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@images': path.resolve(__dirname, 'src/assets/images'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons'),
     },
   },
   module: {
@@ -31,7 +32,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|woff|woff2)$/i,
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(jpe?g|png|gif|woff|woff2)$/i,
         loader: 'url-loader',
       },
     ],
