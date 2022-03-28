@@ -2,12 +2,12 @@ import React from 'react';
 import homeBackground from '@images/homeBackground.jpg';
 import NavBarButton from '@icons/navBarButton.svg';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
-import { getAge, myDateOfBirth } from '@utils/getAge';
+import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
 import './Home.css';
 
 const Home = () => {
   const { currentTheme } = useThemeContext();
-  const age = getAge(myDateOfBirth);
+  const age = getAge(MY_BIRTH_DATE);
 
   return (
     <section className="home" style={{ backgroundImage: `url(${homeBackground})` }}>

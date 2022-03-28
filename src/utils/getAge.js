@@ -9,4 +9,4 @@ export const getAge = (birthDateString) => {
   return age;
 };
 
-export const myDateOfBirth = '1999-05-20T00:00:00';
+export const MY_BIRTH_DATE = '1999-05-20T00:00:00';
