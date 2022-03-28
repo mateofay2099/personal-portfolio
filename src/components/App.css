@@ -7,3 +7,20 @@
 main section {
   min-height: 100vh;
 }
+
+h1 {
+  font-size: 13vw;
+}
+
+h4 {
+  font-size: 4.6vw;
+  color: var(--secondary);
+}
+
+h1, h2, h3, h5, h6, p {
+  color: var(--text);
+}
+
+p {
+  font-size: 4.3vw;
+}
