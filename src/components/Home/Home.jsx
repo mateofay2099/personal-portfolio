@@ -28,7 +28,9 @@ const Home = () => {
           I love what I do and I am constantly looking for learning new technologies and improving my current skills.
         </p>
       </div>
-      <button className="aboutMeButton">More About Me</button>
+      <button className="aboutMeButton">
+        <p>More About Me</p>
+      </button>
     </section>
   );
 };

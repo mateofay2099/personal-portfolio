@@ -1,6 +1,5 @@
 .home {
   background-size: cover;
-  padding-left: 7vw;
 }
 
 section nav {
@@ -12,8 +11,8 @@ section nav {
 section nav .navBarButton {
   height: 5vh;
   width: 5vh;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-top: 3vh;
+  margin-right: 4vw;
 }
 
 section .homeTitleDiv {
@@ -34,12 +33,15 @@ section .homeIntroductionDiv {
 }
 
 section .aboutMeButton {
-  font-size: 4vw;
   height: 6.4vh;
   width: 38vw;
   border-radius: 30px;
   border: 0;
   background-color: var(--primary);
-  color: var(--black);
   margin-top: 8.6vh;
+}
+
+section .aboutMeButton p {
+  font-size: 4vw;
+  color: var(--black);
 }
