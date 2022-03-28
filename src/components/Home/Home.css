@@ -1,0 +1,45 @@
+.home {
+  background-size: cover;
+  padding-left: 7vw;
+}
+
+section nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+section nav .navBarButton {
+  height: 5vh;
+  width: 5vh;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+section .homeTitleDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+section .homeTitleDiv h1::first-letter {
+  color: var(--primary);
+}
+
+section .homeIntroductionDiv {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12vh;
+}
+
+section .aboutMeButton {
+  font-size: 4vw;
+  height: 6.4vh;
+  width: 38vw;
+  border-radius: 30px;
+  border: 0;
+  background-color: var(--primary);
+  color: var(--black);
+  margin-top: 8.6vh;
+}
