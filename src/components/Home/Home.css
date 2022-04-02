@@ -2,37 +2,37 @@
   background-size: cover;
 }
 
-section nav {
+.home nav {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-section nav .navBarButton {
+.home nav .navBarButton {
   height: 5vh;
   width: 5vh;
   margin-top: 3vh;
   margin-right: 4vw;
 }
 
-section .homeTitleDiv {
+.home .homeTitleDiv {
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
 }
 
-section .homeTitleDiv h1::first-letter {
+.home .homeTitleDiv h1::first-letter {
   color: var(--primary);
 }
 
-section .homeIntroductionDiv {
+.home .homeIntroductionDiv {
   width: 93%;
   display: flex;
   flex-direction: column;
   margin-top: 12vh;
 }
 
-section .aboutMeButton {
+.home .aboutMeButton {
   height: 6.4vh;
   width: 38vw;
   border-radius: 30px;
@@ -41,7 +41,7 @@ section .aboutMeButton {
   margin-top: 8.6vh;
 }
 
-section .aboutMeButton p {
+.home .aboutMeButton p {
   font-size: 4vw;
   color: var(--black);
 }

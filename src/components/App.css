@@ -6,7 +6,7 @@
 
 main section {
   min-height: 100vh;
-  padding-left: 7vw;
+  padding: 0 7vw;
 }
 
 h1 {
