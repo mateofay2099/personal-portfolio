@@ -6,6 +6,7 @@
 
 main section {
   min-height: 100vh;
+  padding: 0 7vw;
 }
 
 h1 {
@@ -28,4 +29,22 @@ h1, h2, h3, h4, h5, h6, p {
 p {
   font-size: 4.3vw;
   line-height: 5.7vw;
+}
+
+section h2 {
+  font-size: 9vw;
+  color: var(--secondary);
+  padding-top: 7vh;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  height: 0.3vh;
+  width: 25%;
+  background: var(--secondary);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -1vh;
 }

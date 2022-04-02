@@ -1,8 +1,7 @@
 import * as colors from './colors';
 
 export const appTheme = {
-  white: colors.WHITE,
-  black: colors.BLACK,
+  customBlack: colors.CUSTOM_BLACK,
   transparent: colors.TRANSPARENT,
 
   background: colors.BACKGROUND,

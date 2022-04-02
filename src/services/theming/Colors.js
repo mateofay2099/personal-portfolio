@@ -1,5 +1,4 @@
-export const WHITE = '#FFFFFF';
-export const BLACK = '#000000';
+export const CUSTOM_BLACK = '#090909';
 export const TRANSPARENT = 'transparent';
 
 export const BACKGROUND = '#090909';
