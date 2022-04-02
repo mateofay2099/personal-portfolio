@@ -43,5 +43,5 @@
 
 .home .aboutMeButton p {
   font-size: 4vw;
-  color: var(--black);
+  color: var(--customBlack);
 }
