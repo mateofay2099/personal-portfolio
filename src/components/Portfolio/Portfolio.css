@@ -1,0 +1,104 @@
+.portfolio, .portfolio * {
+  background-color: var(--customBlack);
+}
+
+.portfolio .slider {
+  margin-top: 9rem;
+  height: calc(80vh - 13.2rem);
+}
+
+.portfolio .slider nav button[class*="--active"] {
+  background-color: var(--primary);
+}
+
+.portfolio .slider .portfolioCardDiv {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCard {
+  background-color: transparent;
+  margin-top: 3.6rem;
+  height: 35%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4vw;
+  border-radius: 3rem;
+  text-align: center;
+  box-shadow: 0.03rem 0.3rem 1rem var(--primary); 
+}
+
+.portfolio .slider .portfolioCardDiv a:active, .portfolio .slider .portfolioCardDiv a:active * {
+  background: var(--primary);
+  color: var(--customBlack);
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCardDescription {
+  background-color: transparent;
+  width: 85%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCardSkeletonDiv {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCardSkeletonDiv * {
+  background-color: var(--text);
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton1,
+.portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
+  width: 80%;
+  height: 11%;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
+  width: 65%;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton1,
+.portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
+  width: 87%;
+  height: 4%;
+}
+
+.portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
+  width: 80%;
+}
+
+.comingSoonLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 26%;
+  min-height: 15%;
+  width: 200vw;
+  background: linear-gradient(var(--blur), var(--blur));
+  transform: rotate(22deg);
+  opacity: 0.7;
+}
+
+.comingSoonLabel h3 {
+  background: transparent;
+  color: var(--primary);
+  font-size: 3.6rem;
+}

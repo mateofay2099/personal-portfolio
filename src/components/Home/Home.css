@@ -9,16 +9,16 @@
 }
 
 .home nav .navBarButton {
-  height: 5vh;
-  width: 5vh;
-  margin-top: 3vh;
-  margin-right: 4vw;
+  height: 4.5rem;
+  width: 4.5rem;
+  margin-top: 2.7rem;
+  margin-right: 1.6rem;
 }
 
 .home .homeTitleDiv {
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 9rem;
 }
 
 .home .homeTitleDiv h1::first-letter {
@@ -29,19 +29,19 @@
   width: 93%;
   display: flex;
   flex-direction: column;
-  margin-top: 12vh;
+  margin-top: 10.8rem;
 }
 
 .home .aboutMeButton {
-  height: 6.4vh;
-  width: 38vw;
-  border-radius: 30px;
+  height: 5.7rem;
+  width: 15.5rem;
+  border-radius: 3rem;
   border: 0;
   background-color: var(--primary);
-  margin-top: 8.6vh;
+  margin-top: 7.7rem;
 }
 
 .home .aboutMeButton p {
-  font-size: 4vw;
+  font-size: 1.6rem;
   color: var(--customBlack);
 }

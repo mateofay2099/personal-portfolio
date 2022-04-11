@@ -1,7 +1,7 @@
 import React from 'react';
 import './Experience.css';
 import ExperienceCard from '@components/Experience/ExperienceCard';
-import { CARDS } from '@components/Experience/Cards';
+import { CARDS } from '@components/Experience/ExperienceCardsData';
 
 const Experience = () => {
   return (
