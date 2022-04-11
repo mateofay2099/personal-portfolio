@@ -1,6 +1,6 @@
 export const CARDS = [
   {
-    description: 'Here you can see the GitHub repository for this website',
+    description: 'Click on the card to see the GitHub repository for this website',
     key: 'portfolioCards_portfolioWebsite',
     onlySkeleton: false,
     repoLink: 'https://github.com/mateofay2099/personal-portfolio',
