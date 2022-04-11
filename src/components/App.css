@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 * { 
   margin: 0; 
   padding: 0; 
@@ -10,11 +14,15 @@ main section {
 }
 
 h1 {
-  font-size: 53px;
+  font-size: 5.3rem;
+}
+
+h3 {
+  font-size: 1.9rem;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: var(--secondary);
 }
 
@@ -27,8 +35,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
 }
 
 a {
@@ -36,7 +44,7 @@ a {
 }
 
 section h2 {
-  font-size: 36px;
+  font-size: 3.6rem;
   color: var(--secondary);
   padding-top: 7vh;
   position: relative;
@@ -44,13 +52,13 @@ section h2 {
 
 section h2::after {
   content: '';
-  height: 2.7px;
-  width: 85px;
+  height: 0.27rem;
+  width: 8.5rem;
   background: var(--secondary);
   position: absolute;
   left: 0;
   bottom: 0;
-  margin-bottom: -9px;
+  margin-bottom: -0.9rem;
 }
 
 .fullScreenShadow {

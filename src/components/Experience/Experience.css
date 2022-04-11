@@ -3,35 +3,35 @@
 }
 
 .experience .experienceCardsDiv {
-  margin-top: 126px;
+  margin-top: 12.6rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 .experience .experienceCard {
-  width: 305px;
-  height: 180px;
-  border: 1px solid var(--customBlack);
+  width: 30.5rem;
+  height: 18rem;
+  border: 0.1rem solid var(--customBlack);
   position: relative;
-  box-shadow: 0.3px 2px 6px 1px var(--primary);
-  margin-bottom: 100px;
+  box-shadow: 0.03rem 0.2rem 0.6rem 0.1rem var(--primary);
+  margin-bottom: 10rem;
 }
 
 .experience .experienceCard::before {
   content: '';
   position: absolute;
-  height: 45px;
-  width: 85px;
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
+  height: 4.5rem;
+  width: 8.5rem;
+  border-top-left-radius: 4.5rem;
+  border-top-right-radius: 4.5rem;
   left: 25%;
   transform: translate(-50%, -98%);
-  box-shadow: 0.3px 2px 6px 1px var(--primary);
+  box-shadow: 0.03rem 0.2rem 0.6rem 0.1rem var(--primary);
 }
 
 .experience .experienceCard, .experienceCard::after {
-  border-radius: 30px;
+  border-radius: 3rem;
 }
 
 .experience .experienceCard, .experienceCard::after, .experienceCard::before {
@@ -54,7 +54,7 @@
 .experience .experienceCard img {
   position: absolute;
   left: 25%;
-  width: 61px;
+  width: 6.1rem;
   transform: translate(-50%, -55%);
 }
 
