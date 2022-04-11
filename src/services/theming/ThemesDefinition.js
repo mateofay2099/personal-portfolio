@@ -1,4 +1,4 @@
-import * as colors from './colors';
+import * as colors from './Colors';
 
 export const appTheme = {
   customBlack: colors.CUSTOM_BLACK,
