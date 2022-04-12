@@ -5,17 +5,18 @@ import Portfolio from '@components/Portfolio/Portfolio';
 import Contact from '@components/Contact/Contact';
 import ThemeHandler from '@components/Wrappers/ThemeHandler';
 import { ThemeProvider } from '@providers/Theming.provider.jsx';
+import { ClickHandlerProvider } from '@providers/ClickHandler.provider';
 import './App.css';
 
 const App = () => (
   <ThemeProvider>
     <ThemeHandler>
-      <main>
+      <ClickHandlerProvider>
         <Home />
         <Experience />
         <Portfolio />
         <Contact />
-      </main>
+      </ClickHandlerProvider>
     </ThemeHandler>
   </ThemeProvider>
 );
