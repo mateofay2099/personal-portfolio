@@ -5,7 +5,7 @@ import { CARDS } from '@components/Experience/ExperienceCardsData';
 
 const Experience = () => {
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <h2>Experience</h2>
       <div className="experienceCardsDiv">
         {CARDS.map(({ description, icon, key }) => (

@@ -7,7 +7,7 @@ import './Portfolio.css';
 
 const Portfolio = () => {
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="portfolio">
       <h2>Portfolio</h2>
       <AwesomeSlider className="slider" organicArrows={false}>
         {CARDS.map(({ description, key, onlySkeleton, repoLink, title }) => (

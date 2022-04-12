@@ -8,7 +8,7 @@ const Contact = () => {
   const [textareaFocused, setTextareaFocused] = useState(false);
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <h2>Stay in Touch</h2>
       <p>
         If you are interested in my CV, want to develop a web or mobile app, or need any kind of

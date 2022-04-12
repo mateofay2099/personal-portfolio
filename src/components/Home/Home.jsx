@@ -1,19 +1,15 @@
 import React from 'react';
-import homeBackground from '@images/homeBackground.jpg';
-import NavBarButton from '@icons/navBarButton.svg';
-import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
+import homeBackground from '@images/homeBackground.jpg';
+import NavBar from './NavBar';
 import './Home.css';
 
 const Home = () => {
-  const { currentTheme } = useThemeContext();
   const age = getAge(MY_BIRTH_DATE);
 
   return (
     <section className="home" style={{ backgroundImage: `url(${homeBackground})` }}>
-      <nav>
-        <NavBarButton className="navBarButton" stroke={currentTheme.secondary} />
-      </nav>
+      <NavBar />
       <div className="homeTitleDiv">
         <h1>Hi, I am</h1>
         <h1>Mateo Fay</h1>
