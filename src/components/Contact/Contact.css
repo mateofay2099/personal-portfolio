@@ -62,3 +62,8 @@
 .contact form .contactMeButton p {
   color: var(--customBlack);
 }
+
+.contact form .emailInput::placeholder,
+.contact form .messageInputDiv textarea::placeholder {
+  font-family: var(--primary-font), sans-serif;
+}
