@@ -25,7 +25,7 @@ const NavBar = () => {
       <NavBarButton
         className="navBarButton"
         onClick={handleNavBarButtonClick}
-        stroke={currentTheme.secondary}
+        stroke={currentTheme.primary}
         style={showNavBarOptions ? { visibility: 'hidden' } : {}}
       />
       {showNavBarOptions && (
