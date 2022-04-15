@@ -13,13 +13,13 @@ const Portfolio = () => {
     <section className="portfolio" id="portfolio">
       <h2>{getMessage('portfolio.title')}</h2>
       <AwesomeSlider className="slider" organicArrows={false}>
-        {CARDS.map(({ descriptionKey, key, onlySkeleton, repoLink, title }) => (
+        {CARDS.map(({ descriptionKey, key, onlySkeleton, repoLink, titleKey }) => (
           <div className="portfolioCardDiv" key={key}>
             <PortfolioCard
               description={getMessage(descriptionKey)}
               onlySkeleton={onlySkeleton}
               repoLink={repoLink}
-              title={title}
+              title={getMessage(titleKey)}
             />
           </div>
         ))}
