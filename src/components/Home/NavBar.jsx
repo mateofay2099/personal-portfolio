@@ -3,13 +3,16 @@ import NavBarButton from '@icons/navBarButton.svg';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';
+import { LANGUAGES } from '@services/languages/languages';
 import './Home.css';
 
 const NavBar = () => {
   const { currentTheme } = useThemeContext();
   const [showNavBarOptions, setShowNavBarOptions] = useState(false);
   const { addFunctionToExecute, removeFunctionToExecute } = useClickHandlerContext();
-  const { getMessage } = useLanguageContext();
+  const { getMessage, setCurrentLanguage } = useLanguageContext();
+  const ENGLISH_TEXT = getMessage('home.navBar.english');
+  const SPANISH_TEXT = getMessage('home.navBar.spanish');
 
   const onClickOutsideNavBarOptions = () => {
     setShowNavBarOptions(false);
@@ -20,6 +23,12 @@ const NavBar = () => {
     e.stopPropagation();
     setShowNavBarOptions(true);
     addFunctionToExecute(onClickOutsideNavBarOptions);
+  };
+
+  const onLanguageSelected = (e) => {
+    const selectedLanguage = e.target.value;
+    if (selectedLanguage === SPANISH_TEXT) setCurrentLanguage(LANGUAGES.SPA);
+    if (selectedLanguage === ENGLISH_TEXT) setCurrentLanguage(LANGUAGES.ENG);
   };
 
   return (
@@ -42,12 +51,13 @@ const NavBar = () => {
             <a href="#contact">{getMessage('home.navBar.contact')}</a>
           </li>
           <li onClick={(e) => e.stopPropagation()}>
-            <select name="language" id="languageSelector">
+            <select name="language" id="languageSelector" onChange={onLanguageSelected}>
               <option selected disabled>
+                {/* TODO: Fix this, use defaultValue on select */}
                 {getMessage('home.navBar.selectLanguage')}
               </option>
-              <option>{getMessage('home.navBar.english')}</option>
-              <option>{getMessage('home.navBar.spanish')}</option>
+              <option>{ENGLISH_TEXT}</option>
+              <option>{SPANISH_TEXT}</option>
             </select>
           </li>
         </ul>

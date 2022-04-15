@@ -35,7 +35,8 @@ export default {
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',
-  'portfolio.card.personalPortfolio': () =>
+  'portfolio.card.personalPortfolio.title': () => 'Personal Portfolio Website',
+  'portfolio.card.personalPortfolio.description': () =>
     'Click on the card to see the GitHub repository for this website',
 
   // Contact
