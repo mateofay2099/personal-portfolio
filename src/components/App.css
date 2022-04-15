@@ -13,7 +13,7 @@ main section {
 }
 
 h1 {
-  font-size: 5.3rem;
+  font-size: 5rem;
 }
 
 h3 {
@@ -40,6 +40,10 @@ p {
 
 a {
   text-decoration: none;
+}
+
+select, option {
+  background: var(--customBlack);
 }
 
 section h2 {

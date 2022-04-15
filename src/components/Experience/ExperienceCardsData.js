@@ -3,12 +3,12 @@ import responsiveIcon from '@icons/cards/responsive.png';
 
 export const CARDS = [
   {
-    description: 'Worked for clients from different countries all around the world',
+    descriptionKey: 'experience.card.international',
     icon: internationalIcon,
     key: 'experienceCards_international',
   },
   {
-    description: 'Developed flexible interfaces that adapt to different screen sizes',
+    descriptionKey: 'experience.card.responsive',
     icon: responsiveIcon,
     key: 'experienceCards_responsive',
   },
