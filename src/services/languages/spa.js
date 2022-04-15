@@ -18,13 +18,13 @@ export default {
 
   'home.aboutMeModal.location.title': () => 'Ubicación',
   'home.aboutMeModal.location.description': () =>
-    'He vivido en Campana toda mi vida, una ciudad al norte de la provincia de Buenos Aires, Argentina. Gracias al auje del tele trabajo ahora puedo trabajar desde cualquier lugar, algo de lo que píenso sacar ventaja en un futuro cercano. Aunque estoy muy a gusto trabajando de esta forma, también estaría dispuesto a volver a las oficinas en un nuevo país. Esto se debe a que realmente me gustaría asentarme en un nuevo e interesante lugar.',
+    'He vivido en Campana toda mi vida, una ciudad al norte de la provincia de Buenos Aires, Argentina. Gracias al auge del teletrabajo ahora puedo trabajar desde cualquier lugar, algo de lo que píenso sacar ventaja en un futuro cercano. Aunque estoy muy a gusto trabajando de esta forma, también estaría dispuesto a volver a las oficinas en un nuevo país. Esto se debe a un deseo personal de asentarme en un nuevo e interesante lugar.',
   'home.aboutMeModal.hobbies.title': () => 'Hobbies',
   'home.aboutMeModal.hobbies.description': () =>
-    'Adem[as de programar, en mi tiempo libre me gusta juntarme con amigos, tocar la guitarra, ir al gimnasio, y pasar tiempo en casa con mis dos hermosos gatos. Tambien me gusta mucho cocinar, mayormente cosas saladas, pero cada tanto disfruto de hacer algo dulce como una torta',
+    'Además de programar, en mi tiempo libre me gusta juntarme con amigos, tocar la guitarra, ir al gimnasio, y pasar tiempo en casa con mis dos hermosos gatos. También me gusta mucho cocinar, mayormente cosas saladas, pero ocasionalmente disfruto de hacer una torta o algo dulce',
   'home.aboutMeModal.longTermPlan.title': () => 'Plan a futuro',
   'home.aboutMeModal.longTermPlan.description': () =>
-    'Aunque actualmente estoy trabajando cono desarrollador fullstack, en el futuro me gustaría dedicarme al mundo de data science y machine learning. Encuenrto esta área muy interesante, y extremadamente importante en el futuro de la tecnología.',
+    'Aunque actualmente estoy trabajando como desarrollador fullstack, en el futuro me interesa dedicarme al mundo de data science y machine learning. Encuentro esta área muy interesante, y extremadamente importante en el futuro de la tecnología.',
 
   // Experience
   'experience.title': () => 'Experiencia',
