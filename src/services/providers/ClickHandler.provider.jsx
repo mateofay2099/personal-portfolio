@@ -24,7 +24,9 @@ export const ClickHandlerProvider = ({ children }) => {
 
   return (
     <ClickHandlerContext.Provider value={clickHandlerContext}>
-      <main onClick={executeAllFunctions}>{children}</main>
+      <main onClick={executeAllFunctions} translate="no">
+        {children}
+      </main>
     </ClickHandlerContext.Provider>
   );
 };

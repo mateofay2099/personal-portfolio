@@ -7,7 +7,7 @@ const PortfolioCards = ({ description, onlySkeleton, repoLink, title }) => {
       <>
         <div className="fullScreenShadow" />
         <div className="comingSoonLabel">
-          <h3>Coming Soon!</h3>
+          <h3>{title}</h3>
         </div>
         <a className="portfolioCard" href={repoLink}>
           <div className="portfolioCardSkeletonDiv">

@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import NavBarButton from '@icons/navBarButton.svg';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
+import { useLanguageContext } from '@providers/Language.provider';
 import './Home.css';
 
 const NavBar = () => {
   const { currentTheme } = useThemeContext();
   const [showNavBarOptions, setShowNavBarOptions] = useState(false);
   const { addFunctionToExecute, removeFunctionToExecute } = useClickHandlerContext();
+  const { getMessage } = useLanguageContext();
 
   const onClickOutsideNavBarOptions = () => {
     setShowNavBarOptions(false);
@@ -31,13 +33,22 @@ const NavBar = () => {
       {showNavBarOptions && (
         <ul className="collapsableNavBarOptions">
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience">{getMessage('experience.title')}</a>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">{getMessage('portfolio.title')}</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">{getMessage('home.navBar.contact')}</a>
+          </li>
+          <li onClick={(e) => e.stopPropagation()}>
+            <select name="language" id="languageSelector">
+              <option selected disabled>
+                {getMessage('home.navBar.selectLanguage')}
+              </option>
+              <option>{getMessage('home.navBar.english')}</option>
+              <option>{getMessage('home.navBar.spanish')}</option>
+            </select>
           </li>
         </ul>
       )}
