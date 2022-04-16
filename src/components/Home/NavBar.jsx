@@ -35,6 +35,7 @@ const NavBar = () => {
     <nav>
       <NavBarButton
         className="navBarButton"
+        data-cy="navBarButton"
         onClick={handleNavBarButtonClick}
         stroke={currentTheme.primary}
         style={showNavBarOptions ? { visibility: 'hidden' } : {}}
@@ -42,7 +43,9 @@ const NavBar = () => {
       {showNavBarOptions && (
         <ul className="collapsableNavBarOptions">
           <li>
-            <a href="#experience">{getMessage('experience.title')}</a>
+            <a data-cy="navBar-experienceOption" href="#experience">
+              {getMessage('experience.title')}
+            </a>
           </li>
           <li>
             <a href="#portfolio">{getMessage('portfolio.title')}</a>
