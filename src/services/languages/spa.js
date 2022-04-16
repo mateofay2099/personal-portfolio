@@ -29,20 +29,20 @@ export default {
   // Experience
   'experience.title': () => 'Experiencia',
   'experience.card.international': () =>
-    'Worked for clients from different countries all around the world',
+    'Trabajado para clientes de distintos países alrededor del mundo',
   'experience.card.responsive': () =>
-    'Developed flexible interfaces that adapt to different screen sizes',
+    'Desarrollado interfaces flexibles que se adaptan a distintos tamaños de pantalla',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',
-  'portfolio.card.personalPortfolio.title': () => 'Personal Portfolio Website',
+  'portfolio.card.personalPortfolio.title': () => 'Página de portfolio personal',
   'portfolio.card.personalPortfolio.description': () =>
-    'Click on the card to see the GitHub repository for this website',
+    'Clickee en la carta para ver el repositorio de Github correspondiente a este sitio web',
 
   // Contact
   'contact.title': () => 'Sigamos en contacto',
   'contact.description': () =>
-    'If you are interested in my CV, want to develop a web or mobile app, or need any kind of help, feel free to reach out!',
+    'Si estás interesado en mi CV, querés desarrollar una aplicación web o móvil, o necesitás cualquier tipo de ayuda, sentite libre de comunicarte!',
   'contact.emailInput.placeholder': () => 'Tu correo electrónico',
   'contact.messageInput.placeholder': () => 'Escribe un mensaje...',
   'contact.contactMe.button': () => 'Contactame',
