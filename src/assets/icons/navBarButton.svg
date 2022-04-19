@@ -1,11 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 44">
   <g id="Group_6" data-name="Group 6" transform="translate(-367 -20)">
-    <path id="Path_8" data-name="Path 8" d="M0,0H31.461" transform="translate(374.039 29.5)" fill="none" stroke="current" stroke-linecap="round" stroke-width="1.3"/>
-    <path id="Path_9" data-name="Path 9" d="M0,0H31.795" transform="translate(374.039 41.657)" fill="none" stroke="current" stroke-linecap="round" stroke-width="1.3"/>
-    <line id="Line_3" data-name="Line 3" x2="31.921" transform="translate(374.039 53.813)" fill="none" stroke="current" stroke-linecap="round" stroke-width="1.3"/>
-  </g>
-  <g id="Rectangle_5" data-name="Rectangle 5" fill="none" stroke="current" stroke-width="0.6">
-    <rect rx="4" stroke="none"/>
-    <rect x="0.2" y="0.2" width="44.6" height="43.6" rx="3.8" fill="none"/>
+    <path id="Path_8" data-name="Path 8" d="M0,0H31.461" transform="translate(374.039 29.5)" fill="none" stroke="current" stroke-linecap="round" stroke-width="6"/>
+    <path id="Path_9" data-name="Path 9" d="M0,0H31.795" transform="translate(374.039 41.657)" fill="none" stroke="current" stroke-linecap="round" stroke-width="6"/>
+    <line id="Line_3" data-name="Line 3" x2="31.921" transform="translate(374.039 53.813)" fill="none" stroke="current" stroke-linecap="round" stroke-width="6"/>
   </g>
 </svg>

@@ -1,5 +1,6 @@
 .home {
   background-size: cover;
+  min-height: 100vh;
 }
 
 .home nav {
@@ -10,10 +11,9 @@
 }
 
 .home nav .navBarButton {
-  height: 3.5rem;
-  width: 3.5rem;
-  margin-top: 2.5rem;
-  margin-right: 1rem;
+  display: absolute;
+  height: 4rem;
+  width: 4rem;
 }
 
 .home nav .collapsableNavBarOptions {
@@ -25,12 +25,13 @@
   border: 0.1rem solid var(--primary);
   display: flex;
   flex-direction: column;
+  border-radius: 2rem;
+  padding: 1.4rem 1.65rem;
 }
 
 .home nav .collapsableNavBarOptions li {
   flex: 1;
   width: 100%;
-  padding: 0 1rem;
   list-style-type: none;
 }
 
@@ -67,16 +68,14 @@
 }
 
 .home .aboutMeButton {
-  height: 5.7rem;
-  padding: 0 1.5rem;
-  border-radius: 3rem;
+  padding: 1.4rem 1.65rem;
+  border-radius: 2rem;
   border: 0;
   background-color: var(--primary);
   margin-top: 7rem;
 }
 
 .home .aboutMeButton p {
-  font-size: 1.5rem;
   color: var(--customBlack);
 }
 
