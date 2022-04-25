@@ -12,9 +12,10 @@ const AboutMeModal = ({ onCloseButtonClick }) => {
 
   return (
     <div className="aboutMeModalDiv">
-      <div className="aboutMeModal" onClick={(e) => e.stopPropagation()}>
+      <div className="aboutMeModal" data-cy="aboutMeModal" onClick={(e) => e.stopPropagation()}>
         <CloseButton
           className="closeModalButton"
+          data-cy="aboutMeModal-closeButton"
           fill={closeModalButtonColor}
           onClick={onCloseButtonClick}
           stroke={closeModalButtonColor}
