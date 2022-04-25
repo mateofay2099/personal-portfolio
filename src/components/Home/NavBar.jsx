@@ -11,8 +11,8 @@ const NavBar = () => {
   const [showNavBarOptions, setShowNavBarOptions] = useState(false);
   const { addFunctionToExecute, removeFunctionToExecute } = useClickHandlerContext();
   const { getMessage, setCurrentLanguage } = useLanguageContext();
-  const ENGLISH_TEXT = getMessage('home.navBar.english');
-  const SPANISH_TEXT = getMessage('home.navBar.spanish');
+  const ENGLISH_VALUE = 'english';
+  const SPANISH_VALUE = 'spanish';
 
   const onClickOutsideNavBarOptions = () => {
     setShowNavBarOptions(false);
@@ -27,8 +27,8 @@ const NavBar = () => {
 
   const onLanguageSelected = (e) => {
     const selectedLanguage = e.target.value;
-    if (selectedLanguage === SPANISH_TEXT) setCurrentLanguage(LANGUAGES.SPA);
-    if (selectedLanguage === ENGLISH_TEXT) setCurrentLanguage(LANGUAGES.ENG);
+    if (selectedLanguage === SPANISH_VALUE) setCurrentLanguage(LANGUAGES.SPA);
+    if (selectedLanguage === ENGLISH_VALUE) setCurrentLanguage(LANGUAGES.ENG);
   };
 
   return (
@@ -41,26 +41,38 @@ const NavBar = () => {
         style={showNavBarOptions ? { visibility: 'hidden' } : {}}
       />
       {showNavBarOptions && (
-        <ul className="collapsableNavBarOptions">
+        <ul className="collapsableNavBarOptions" data-cy="navBarOptions">
           <li>
             <a data-cy="navBar-experienceOption" href="#experience">
               {getMessage('experience.title')}
             </a>
           </li>
           <li>
-            <a href="#portfolio">{getMessage('portfolio.title')}</a>
+            <a data-cy="navBar-portfolioOption" href="#portfolio">
+              {getMessage('portfolio.title')}
+            </a>
           </li>
           <li>
-            <a href="#contact">{getMessage('home.navBar.contact')}</a>
+            <a data-cy="navBar-contactOption" href="#contact">
+              {getMessage('home.navBar.contact')}
+            </a>
           </li>
           <li onClick={(e) => e.stopPropagation()}>
-            <select name="language" id="languageSelector" onChange={onLanguageSelected}>
-              <option selected disabled>
-                {/* TODO: Fix this, use defaultValue on select */}
+            <select
+              data-cy="navBar-languageSelector"
+              defaultValue="selectLanguage"
+              name="language"
+              id="languageSelector"
+              onChange={onLanguageSelected}>
+              <option data-cy="languageSelector-defaultOption" value="selectLanguage" disabled>
                 {getMessage('home.navBar.selectLanguage')}
               </option>
-              <option>{ENGLISH_TEXT}</option>
-              <option>{SPANISH_TEXT}</option>
+              <option data-cy="languageSelector-englishOption" value={ENGLISH_VALUE}>
+                {getMessage('home.navBar.english')}
+              </option>
+              <option data-cy="languageSelector-spanishOption" value={SPANISH_VALUE}>
+                {getMessage('home.navBar.spanish')}
+              </option>
             </select>
           </li>
         </ul>

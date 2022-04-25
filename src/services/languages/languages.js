@@ -6,7 +6,13 @@ export const LANGUAGES = {
   SPA: 'SPANISH',
 };
 
-export const languagesMessages = {
+const languagesMessages = {
   [LANGUAGES.ENG]: engMessages,
   [LANGUAGES.SPA]: spaMessages,
+};
+
+export const getMessageByLanguage = (language, messageKey, params) => {
+  return languagesMessages[language][messageKey]
+  ? languagesMessages[language][messageKey](params)
+  : '';
 };
