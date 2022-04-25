@@ -10,11 +10,11 @@ const Portfolio = () => {
   const { getMessage } = useLanguageContext();
 
   return (
-    <section className="portfolio" id="portfolio">
+    <section className="portfolio" data-cy="portfolioSection" id="portfolio">
       <h2>{getMessage('portfolio.title')}</h2>
       <AwesomeSlider className="slider" organicArrows={false}>
         {CARDS.map(({ descriptionKey, key, onlySkeleton, repoLink, titleKey }) => (
-          <div className="portfolioCardDiv" key={key}>
+          <div className="portfolioCardDiv" data-cy="portfolioCardDiv" key={key}>
             <PortfolioCard
               description={getMessage(descriptionKey)}
               onlySkeleton={onlySkeleton}

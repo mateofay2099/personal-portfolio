@@ -25,10 +25,7 @@ const Home = () => {
   };
 
   return (
-    <section
-      className="home"
-      data-cy="homeSection"
-      style={{ backgroundImage: `url(${homeBackground})` }}>
+    <section className="home" style={{ backgroundImage: `url(${homeBackground})` }}>
       <NavBar />
       <div className="homeTitleDiv">
         <h1>{getMessage('home.name.introduction')}</h1>
@@ -36,10 +33,10 @@ const Home = () => {
         <h4>{getMessage('home.profession')}</h4>
       </div>
       <div className="homeIntroductionDiv">
-        <p>{getMessage('home.introduction.description1', { age })}</p>
+        <p data-cy="homeIntroduction1">{getMessage('home.introduction.description1', { age })}</p>
         <p>{getMessage('home.introduction.description2')}</p>
       </div>
-      <button className="aboutMeButton" onClick={handleAboutMeButtonClick}>
+      <button className="aboutMeButton" data-cy="aboutMeButton" onClick={handleAboutMeButtonClick}>
         <p>{getMessage('home.aboutMe.button')}</p>
       </button>
       {showAboutMeModal && <AboutMeModal onCloseButtonClick={onClickOutsideModal} />}

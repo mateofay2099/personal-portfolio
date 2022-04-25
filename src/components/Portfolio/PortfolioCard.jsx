@@ -27,10 +27,10 @@ const PortfolioCards = ({ description, onlySkeleton, repoLink, title }) => {
 
   return (
     <>
-      <a className="portfolioCard" href={repoLink}>
+      <a className="portfolioCard" data-cy="portfolioCard" href={repoLink}>
         <h3>{title}</h3>
       </a>
-      <div className="portfolioCardDescription">
+      <div className="portfolioCardDescription" data-cy="portfolioCard-description">
         <p>{description}</p>
       </div>
     </>

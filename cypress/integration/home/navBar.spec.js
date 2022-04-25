@@ -1,7 +1,7 @@
 import { getMessageByLanguage, LANGUAGES } from '../../../src/services/languages/languages';
 
 const selectors = {
-  homeSection: '[data-cy=homeSection]',
+  contactSection: '[data-cy=contactSection]',
   navBarButton: '[data-cy=navBarButton]',
   navBarOptions: '[data-cy=navBarOptions]',
   experienceOption: '[data-cy=navBar-experienceOption]',
@@ -33,11 +33,11 @@ describe('NavBar tests', () => {
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.navBarOptions).should('be.visible');
     cy.get(selectors.experienceOption).click();
-    cy.url().should('include', '#experience');
+    cy.location('hash').should('eq', '#experience')
     cy.get(selectors.navBarOptions).should('not.exist');
 
     cy.get(selectors.navBarButton).click();
-    cy.get(selectors.homeSection).click();
+    cy.get(selectors.contactSection).click();
     cy.get(selectors.navBarOptions).should('not.exist');
   });
 
@@ -45,15 +45,15 @@ describe('NavBar tests', () => {
     cy.visit('/');
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.experienceOption).click();
-    cy.url().should('include', '#experience');
+    cy.location('hash').should('eq', '#experience')
 
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.portfolioOption).click();
-    cy.url().should('include', '#portfolio');
+    cy.location('hash').should('eq', '#portfolio')
 
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.contactOption).click();
-    cy.url().should('include', '#contact');
+    cy.location('hash').should('eq', '#contact')
   });
 
   it('Should show a language selector with correct disabled default option', () => {

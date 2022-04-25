@@ -8,7 +8,7 @@ const Experience = () => {
   const { getMessage } = useLanguageContext();
 
   return (
-    <section className="experience" id="experience">
+    <section className="experience" data-cy="experienceSection" id="experience">
       <h2>{getMessage('experience.title')}</h2>
       <div className="experienceCardsDiv">
         {CARDS.map(({ descriptionKey, icon, key }) => (

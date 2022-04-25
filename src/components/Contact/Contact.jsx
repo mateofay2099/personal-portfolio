@@ -9,7 +9,7 @@ const Contact = () => {
   const MESSAGE_INPUT_PLACEHOLDER = getMessage('contact.messageInput.placeholder');
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" data-cy="contactSection" id="contact">
       <h2>{getMessage('contact.title')}</h2>
       <p>{getMessage('contact.description')}</p>
       <form>
