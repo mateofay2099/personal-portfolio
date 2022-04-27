@@ -48,6 +48,7 @@ select, option {
 
 section h2 {
   padding-top: 6vh;
+  margin-bottom: 8vh;
   font-size: 3rem;
   color: var(--text);
   position: relative;

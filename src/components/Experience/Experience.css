@@ -6,13 +6,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 8rem;
 }
 
 .experience .experienceCard {
   border: 0.1rem solid var(--customBlack);
   position: relative;
   box-shadow: var(--custom-box-shadow);
-  margin-top: 8rem;
   display: flex;
 }
 

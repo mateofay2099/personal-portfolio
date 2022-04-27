@@ -9,7 +9,6 @@
 .portfolio .slider {
   height: 40rem;
   padding-bottom: 4rem;
-  margin-top: 9rem;
 }
 
 .portfolio .slider nav button[class*="--active"] {
