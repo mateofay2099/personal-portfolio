@@ -3,7 +3,7 @@
 }
 
 .contact > p {
-  margin: 7rem 0.5rem;
+  margin: 7rem 0;
 }
 
 .contact form {
@@ -15,9 +15,9 @@
 .contact form input, .contact form .messageInputDiv {
   background-color: var(--customBlack);
   border: 0.1rem solid var(--primary);
-  width: 90%;
-  border-radius: 3rem;
-  padding: 1.3rem 1.3rem;
+  width: 100%;
+  border-radius: var(--custom-border-radius);
+  padding: var(--custom-padding);
 }
 
 .contact form input, .contact form .messageInputDiv textarea {
@@ -32,7 +32,7 @@
 
 .contact form .messageInputDiv {
   height: 25rem;
-  margin-top: 4rem;
+  margin: 4rem 0;
 }
 
 .contact form .messageInputDiv textarea {
@@ -52,11 +52,11 @@
 }
 
 .contact form .contactMeButton {
+  align-self: flex-start;
   background-color: var(--primary);
-  width: 90%;
-  height: 5rem;
-  border-radius: 3rem;
-  margin-top: 4rem;
+  padding: var(--button-padding);
+  border-radius: var(--custom-border-radius);
+  border: 0;
 }
 
 .contact form .contactMeButton p {

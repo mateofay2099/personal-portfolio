@@ -1,5 +1,5 @@
-import { getAge, MY_BIRTH_DATE } from '../../../src/utils/getAge';
-import { getMessageByLanguage, LANGUAGES } from '../../../src/services/languages/languages';
+import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
+import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
 
 const selectors = {
   homeIntroduction1: '[data-cy=homeIntroduction1]',

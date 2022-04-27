@@ -13,13 +13,15 @@ const AboutMeModal = ({ onCloseButtonClick }) => {
   return (
     <div className="aboutMeModalDiv">
       <div className="aboutMeModal" data-cy="aboutMeModal" onClick={(e) => e.stopPropagation()}>
-        <CloseButton
-          className="closeModalButton"
-          data-cy="aboutMeModal-closeButton"
-          fill={closeModalButtonColor}
-          onClick={onCloseButtonClick}
-          stroke={closeModalButtonColor}
-        />
+        <div className="closeModalButtonDiv">
+          <CloseButton
+            className="closeModalButton"
+            data-cy="aboutMeModal-closeButton"
+            fill={closeModalButtonColor}
+            onClick={onCloseButtonClick}
+            stroke={closeModalButtonColor}
+          />
+        </div>
         <h2>{getMessage('home.aboutMeModal.location.title')}</h2>
         <p>{getMessage('home.aboutMeModal.location.description')}</p>
         <h2>{getMessage('home.aboutMeModal.hobbies.title')}</h2>

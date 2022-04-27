@@ -9,7 +9,7 @@ export default {
     `Tengo ${age} años. Trabajo en desarrollo de software desde los 19 años, aunque previamente ya había aprendido las bases de programación de forma autodidacta.`,
   'home.introduction.description2': () =>
     'Me encanta lo que hago, y estoy constantemente buscando aprender nuevas tecnologías para incrementar mis conocimientos y mejorar mis habilidades.',
-  'home.aboutMe.button': () => 'Más acerca de mí',
+  'home.aboutMe.button': () => 'Acerca de mí',
 
   'home.navBar.contact': () => 'Contacto',
   'home.navBar.selectLanguage': () => 'Cambiar Idioma',
@@ -29,9 +29,9 @@ export default {
   // Experience
   'experience.title': () => 'Experiencia',
   'experience.card.international': () =>
-    'Trabajado para clientes de distintos países alrededor del mundo',
+    'Trabajado para clientes de distintos países alrededor del mundo. Con muy buenas habilidades de comunicación tanto en inglés como en español, he desarrollado aplicaciones para clientes de +8 distintos países.',
   'experience.card.responsive': () =>
-    'Desarrollado interfaces flexibles que se adaptan a distintos tamaños de pantalla',
+    'Desarrollado interfaces flexibles que se adaptan a distintos tamaños de pantalla. Gran experiencia en diseño responsivo, para asegurar una buena experiencia para el usuario, sin importar el tamaño de su pantalla o dispositivo.',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',

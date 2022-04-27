@@ -1,5 +1,5 @@
 import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
-import { CARDS } from '../../../src/components/Experience/ExperienceCardsData';
+import { CARDS } from '@components/Experience/ExperienceCardsData';
 
 const selectors = {
   experienceSection: '[data-cy=experienceSection]',

@@ -9,7 +9,7 @@ html {
 }
 
 main section {
-  padding: 0 7vw 10vh 7vw;
+  padding: 0 7vw 5vh 7vw;
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2.5rem;
 }
 
@@ -49,7 +49,7 @@ select, option {
 section h2 {
   padding-top: 6vh;
   font-size: 3rem;
-  color: var(--secondary);
+  color: var(--text);
   position: relative;
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';
 import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
@@ -9,6 +10,8 @@ import './Home.css';
 
 const Home = () => {
   const [showAboutMeModal, setShowAboutMeModal] = useState(false);
+  const { currentTheme } = useThemeContext();
+  const backgroundImage = `linear-gradient(to bottom, transparent, ${currentTheme.customBlack}), url(${homeBackground})`;
   const age = getAge(MY_BIRTH_DATE);
   const { addFunctionToExecute, removeFunctionToExecute } = useClickHandlerContext();
   const { getMessage } = useLanguageContext();
@@ -25,7 +28,7 @@ const Home = () => {
   };
 
   return (
-    <section className="home" style={{ backgroundImage: `url(${homeBackground})` }}>
+    <section className="home" style={{ backgroundImage }}>
       <NavBar />
       <div className="homeTitleDiv">
         <h1>{getMessage('home.name.introduction')}</h1>
