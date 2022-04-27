@@ -1,5 +1,5 @@
-import { getMessageByLanguage, LANGUAGES } from '../../../src/services/languages/languages';
-import { CARDS } from '../../../src/components/Portfolio/PortfolioCardsData';
+import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
+import { CARDS } from '@components/Portfolio/PortfolioCardsData';
 
 const selectors = {
   portfolioCardDiv: '[data-cy=portfolioCardDiv]',

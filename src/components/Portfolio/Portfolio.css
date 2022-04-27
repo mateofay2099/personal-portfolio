@@ -3,13 +3,13 @@
 }
 
 .portfolio .slider {
+  height: 40rem;
+  padding-bottom: 4rem;
   margin-top: 9rem;
-  height: calc(80vh - 13.2rem);
-  min-height: 50rem;
 }
 
 .portfolio .slider nav button[class*="--active"] {
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .portfolio .slider .portfolioCardDiv {
@@ -18,20 +18,20 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 3rem;
 }
 
 .portfolio .slider .portfolioCardDiv .portfolioCard {
   background-color: transparent;
-  margin-top: 3rem;
-  min-height: 17rem;
-  width: 24rem;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
-  border-radius: 3rem;
+  min-height: 15rem;
+  padding: var(--custom-padding);
+  border-radius: var(--custom-border-radius);
   text-align: center;
-  box-shadow: 0.03rem 0.3rem 1rem var(--primary);
+  box-shadow: var(--custom-box-shadow);
 }
 
 .portfolio .slider .portfolioCardDiv a:active, .portfolio .slider .portfolioCardDiv a:active * {
@@ -40,9 +40,10 @@
 }
 
 .portfolio .slider .portfolioCardDiv .portfolioCardDescription {
+  width: 100%;
+  margin: 9rem 0;
   background-color: transparent;
-  width: 26rem;
-  height: 100%;
+  height: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,20 +56,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
   width: 100%;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCardSkeletonDiv * {
+.portfolio .slider .portfolioCardDiv .portfolioCardSkeletonDiv div {
   background-color: var(--text);
-  border-radius: 2rem;
+  border-radius: var(--custom-border-radius);
   margin-top: 1rem;
 }
 
 .portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton1,
 .portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
   width: 80%;
-  height: 11%;
+  height: 1.6rem;
 }
 
 .portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
@@ -78,7 +78,7 @@
 .portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton1,
 .portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
   width: 87%;
-  height: 4%;
+  height: 1.2rem;
 }
 
 .portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
@@ -90,8 +90,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 26%;
-  min-height: 15%;
+  top: 36%;
+  padding: var(--custom-padding);
   width: 200vw;
   background: linear-gradient(var(--blur), var(--blur));
   transform: rotate(22deg);

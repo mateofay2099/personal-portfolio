@@ -1,6 +1,5 @@
 .home {
   background-size: cover;
-  min-height: 100vh;
 }
 
 .home nav {
@@ -12,6 +11,7 @@
 
 .home nav .navBarButton {
   display: absolute;
+  margin-top: 3rem;
   height: 4rem;
   width: 4rem;
 }
@@ -25,8 +25,8 @@
   border: 0.1rem solid var(--primary);
   display: flex;
   flex-direction: column;
-  border-radius: 2rem;
-  padding: 1.4rem 1.65rem;
+  border-radius: var(--custom-border-radius);
+  padding: var(--custom-padding);
 }
 
 .home nav .collapsableNavBarOptions li {
@@ -51,9 +51,10 @@
 }
 
 .home .homeTitleDiv {
+  min-height: 17vh;
   display: flex;
   flex-direction: column;
-  margin-top: 7.5rem;
+  margin-top: 3.5rem;
 }
 
 .home .homeTitleDiv h1::first-letter {
@@ -61,18 +62,16 @@
 }
 
 .home .homeIntroductionDiv {
-  width: 93%;
   display: flex;
   flex-direction: column;
-  margin-top: 7.5rem;
+  margin: 7.5rem 0;
 }
 
 .home .aboutMeButton {
-  padding: 1.4rem 1.65rem;
-  border-radius: 2rem;
+  padding: var(--button-padding);
+  border-radius: var(--custom-border-radius);
   border: 0;
   background-color: var(--primary);
-  margin-top: 7rem;
 }
 
 .home .aboutMeButton p {
@@ -94,20 +93,30 @@
   height: 85%;
   width: 90%;
   background-color: var(--customBlack);
-  box-shadow: 0.05rem 0.4rem 1.2rem var(--primary);
-  border-radius: 3rem;
+  box-shadow: var(--custom-box-shadow);
+  border-radius: var(--custom-border-radius);
   position: relative;
-  padding: 0 3rem 3rem 3rem;
+  padding: var(--custom-padding);
+  padding-top: 0;
   overflow-y: scroll;
+  z-index: 10;
 }
 
-.home .aboutMeModal .closeModalButton {
+.home .aboutMeModal .closeModalButtonDiv {
   position: absolute;
   top: 2rem;
   right: 2.3rem;
-  height: 2.3rem;
   width: 2.3rem;
+  height: 2.3rem;
   z-index: 3;
+  border: 0.1rem solid var(--primary);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.home .aboutMeModal .closeModalButtonDiv .closeModalButton {
+  width: 100%;
+
 }
 
 .home .aboutMeModal h2 {

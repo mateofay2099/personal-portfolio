@@ -1,4 +1,4 @@
-import { getMessageByLanguage, LANGUAGES } from '../../../src/services/languages/languages';
+import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
 
 const selectors = {
   contactSection: '[data-cy=contactSection]',
