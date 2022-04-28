@@ -13,12 +13,11 @@ const Home = () => {
   const { currentTheme } = useThemeContext();
   const backgroundImage = `linear-gradient(to bottom, transparent, ${currentTheme.customBlack}), url(${homeBackground})`;
   const age = getAge(MY_BIRTH_DATE);
-  const { addFunctionToExecute, removeFunctionToExecute } = useClickHandlerContext();
+  const { addFunctionToExecute } = useClickHandlerContext();
   const { getMessage } = useLanguageContext();
 
   const onClickOutsideModal = () => {
     setShowAboutMeModal(false);
-    removeFunctionToExecute(onClickOutsideModal);
   };
 
   const handleAboutMeButtonClick = (e) => {

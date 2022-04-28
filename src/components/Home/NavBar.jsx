@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import NavBarButton from '@icons/navBarButton.svg';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';
+import useWindowDimensions from '@hooks/useWindowDimensions';
 import { LANGUAGES } from '@services/languages/languages';
 import './Home.css';
 
 const NavBar = () => {
   const { currentTheme } = useThemeContext();
-  const [showNavBarOptions, setShowNavBarOptions] = useState(false);
-  const { addFunctionToExecute, removeFunctionToExecute } = useClickHandlerContext();
+  const EXPANDED_NAVBAR_THRESHOLD = 768;
+  const { width } = useWindowDimensions();
+  const shouldOptionsAlwaysBeDisplayed = width > EXPANDED_NAVBAR_THRESHOLD;
+  const [showNavBarOptions, setShowNavBarOptions] = useState(width > EXPANDED_NAVBAR_THRESHOLD);
+  const { addFunctionToExecute, resetFunctionsToExecute } = useClickHandlerContext();
   const { getMessage, setCurrentLanguage } = useLanguageContext();
   const ENGLISH_VALUE = 'english';
   const SPANISH_VALUE = 'spanish';
 
-  const onClickOutsideNavBarOptions = () => {
-    setShowNavBarOptions(false);
-    removeFunctionToExecute(onClickOutsideNavBarOptions);
-  };
+  const navBarButtonStyle = shouldOptionsAlwaysBeDisplayed
+    ? { display: 'none' }
+    : showNavBarOptions
+    ? { visibility: 'hidden' }
+    : {};
+
+  const onClickOutsideNavBarOptions = () => setShowNavBarOptions(false);
 
   const handleNavBarButtonClick = (e) => {
     e.stopPropagation();
@@ -31,6 +38,51 @@ const NavBar = () => {
     if (selectedLanguage === ENGLISH_VALUE) setCurrentLanguage(LANGUAGES.ENG);
   };
 
+  useEffect(() => {
+    setShowNavBarOptions(shouldOptionsAlwaysBeDisplayed);
+    if (shouldOptionsAlwaysBeDisplayed) {
+      resetFunctionsToExecute();
+    }
+  }, [width]);
+
+  const renderNavBarOptions = () => (
+    <ul className="navBarOptions" data-cy="navBarOptions">
+      <li>
+        <a data-cy="navBar-experienceOption" href="#experience">
+          {getMessage('experience.title')}
+        </a>
+      </li>
+      <li>
+        <a data-cy="navBar-portfolioOption" href="#portfolio">
+          {getMessage('portfolio.title')}
+        </a>
+      </li>
+      <li>
+        <a data-cy="navBar-contactOption" href="#contact">
+          {getMessage('home.navBar.contact')}
+        </a>
+      </li>
+      <li onClick={(e) => e.stopPropagation()}>
+        <select
+          data-cy="navBar-languageSelector"
+          defaultValue="selectLanguage"
+          name="language"
+          id="languageSelector"
+          onChange={onLanguageSelected}>
+          <option data-cy="languageSelector-defaultOption" value="selectLanguage" disabled>
+            {getMessage('home.navBar.selectLanguage')}
+          </option>
+          <option data-cy="languageSelector-englishOption" value={ENGLISH_VALUE}>
+            {getMessage('home.navBar.english')}
+          </option>
+          <option data-cy="languageSelector-spanishOption" value={SPANISH_VALUE}>
+            {getMessage('home.navBar.spanish')}
+          </option>
+        </select>
+      </li>
+    </ul>
+  );
+
   return (
     <nav>
       <NavBarButton
@@ -38,45 +90,9 @@ const NavBar = () => {
         data-cy="navBarButton"
         onClick={handleNavBarButtonClick}
         stroke={currentTheme.primary}
-        style={showNavBarOptions ? { visibility: 'hidden' } : {}}
+        style={navBarButtonStyle}
       />
-      {showNavBarOptions && (
-        <ul className="collapsableNavBarOptions" data-cy="navBarOptions">
-          <li>
-            <a data-cy="navBar-experienceOption" href="#experience">
-              {getMessage('experience.title')}
-            </a>
-          </li>
-          <li>
-            <a data-cy="navBar-portfolioOption" href="#portfolio">
-              {getMessage('portfolio.title')}
-            </a>
-          </li>
-          <li>
-            <a data-cy="navBar-contactOption" href="#contact">
-              {getMessage('home.navBar.contact')}
-            </a>
-          </li>
-          <li onClick={(e) => e.stopPropagation()}>
-            <select
-              data-cy="navBar-languageSelector"
-              defaultValue="selectLanguage"
-              name="language"
-              id="languageSelector"
-              onChange={onLanguageSelected}>
-              <option data-cy="languageSelector-defaultOption" value="selectLanguage" disabled>
-                {getMessage('home.navBar.selectLanguage')}
-              </option>
-              <option data-cy="languageSelector-englishOption" value={ENGLISH_VALUE}>
-                {getMessage('home.navBar.english')}
-              </option>
-              <option data-cy="languageSelector-spanishOption" value={SPANISH_VALUE}>
-                {getMessage('home.navBar.spanish')}
-              </option>
-            </select>
-          </li>
-        </ul>
-      )}
+      {showNavBarOptions && renderNavBarOptions()}
     </nav>
   );
 };

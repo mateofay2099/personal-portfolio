@@ -7,18 +7,18 @@
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
+  width: 100%;
 }
 
 .home nav .navBarButton {
-  display: absolute;
   margin-top: 3rem;
   height: 4rem;
   width: 4rem;
 }
 
-.home nav .collapsableNavBarOptions {
+.home nav .navBarOptions {
   height: 18rem;
-  min-width: 100%;
+  width: 100%;
   position: absolute;
   top: 2rem;
   background-color: var(--customBlack);
@@ -29,13 +29,13 @@
   padding: var(--custom-padding);
 }
 
-.home nav .collapsableNavBarOptions li {
+.home nav .navBarOptions li {
   flex: 1;
   width: 100%;
   list-style-type: none;
 }
 
-.home nav .collapsableNavBarOptions li a, #languageSelector {
+.home nav .navBarOptions li a, #languageSelector {
   height: 100%;
   width: 100%;
   font-size: 2rem;
@@ -129,4 +129,32 @@
 
 .home .aboutMeModal p {
   margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  .home nav .navBarOptions {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    gap: 4rem;
+    border: 0;
+  }
+
+  .home nav .navBarOptions, .home nav .navBarOptions li, #languageSelector {
+    background: transparent;
+  }
+
+  .home nav .navBarOptions li {
+    flex: 0;
+  }
+
+  .home nav .navBarOptions li a, #languageSelector {
+    width: auto;
+    font-size: 1.8rem;
+    box-shadow: 0 3px 3px -3px var(--secondary);
+  }
+  .home nav .navBarOptions li a:hover, #languageSelector:hover {
+    box-shadow: 0 3px 1px -1px var(--secondary);
+  }
 }
