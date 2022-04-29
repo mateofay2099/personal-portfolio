@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBarButton from '@icons/navBarButton.svg';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
@@ -43,7 +43,8 @@ const NavBar = () => {
     if (shouldOptionsAlwaysBeDisplayed) {
       resetFunctionsToExecute();
     }
-  }, [width]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [shouldOptionsAlwaysBeDisplayed, width]);
 
   const renderNavBarOptions = () => (
     <ul className="navBarOptions" data-cy="navBarOptions">
