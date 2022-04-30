@@ -54,7 +54,7 @@ const Home = () => {
         </section>
         <div className="meImgContainer">
           <figure>
-            <img src={meImg} />
+            <img data-cy="homeMeImg" src={meImg} />
             <div className="meImgBorderShadow" />
           </figure>
         </div>

@@ -11,7 +11,7 @@ const NavBar = () => {
   const { currentTheme } = useThemeContext();
   const EXPANDED_NAVBAR_THRESHOLD = 768;
   const { width } = useWindowDimensions();
-  const shouldOptionsAlwaysBeDisplayed = width > EXPANDED_NAVBAR_THRESHOLD;
+  const shouldOptionsAlwaysBeDisplayed = width >= EXPANDED_NAVBAR_THRESHOLD;
   const [showNavBarOptions, setShowNavBarOptions] = useState(width > EXPANDED_NAVBAR_THRESHOLD);
   const { addFunctionToExecute, resetFunctionsToExecute } = useClickHandlerContext();
   const { getMessage, setCurrentLanguage } = useLanguageContext();
