@@ -5,6 +5,7 @@ import { useLanguageContext } from '@providers/Language.provider';
 import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
 import homeBackground from '@images/homeBackground.jpg';
 import meImg from '@images/me.jpeg';
+import ScrollIndicator from '@icons/scrollIndicator.svg';
 import NavBar from './NavBar';
 import AboutMeModal from './AboutMeModal';
 import './Home.css';
@@ -57,6 +58,7 @@ const Home = () => {
             <div className="meImgBorderShadow" />
           </figure>
         </div>
+        <ScrollIndicator className="scrollIndicatorIcon" fill={currentTheme.secondary} />
       </div>
     </div>
   );

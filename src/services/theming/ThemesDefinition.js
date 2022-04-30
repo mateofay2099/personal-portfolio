@@ -7,4 +7,5 @@ export const appTheme = {
   secondary: colors.SECONDARY,
   text: colors.TEXT,
   blur: colors.BLUR,
+  blurredPrimary: colors.BLURRED_PRIMARY,
 };

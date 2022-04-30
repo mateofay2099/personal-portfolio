@@ -2,10 +2,10 @@ html {
   font-size: 62.5%;
 }
 
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main section {
@@ -25,11 +25,22 @@ h4 {
   color: var(--secondary);
 }
 
-h1, h2, h3, h5, h6, p {
+h1,
+h2,
+h3,
+h5,
+h6,
+p {
   color: var(--text);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: var(--primary-font), sans-serif;
 }
 
@@ -42,7 +53,8 @@ a {
   text-decoration: none;
 }
 
-select, option {
+select,
+option {
   background: var(--customBlack);
 }
 
@@ -71,4 +83,42 @@ section h2::after {
   width: 100%;
   background-color: var(--customBlack);
   opacity: 0.7;
+}
+
+/* Change font sizes on smaller devices */
+@media (max-height: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+  section h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  h4 {
+    font-size: 1.55rem;
+  }
+  p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .contact form input,
+  .contact form .messageInputDiv textarea {
+    font-size: 1.3rem;
+  }
+  .homeWithNavbar nav .navBarOptions li a,
+  #languageSelector {
+    font-size: 1.7rem;
+  }
+  .home .aboutMeModal h2 {
+    font-size: 1.9rem;
+  }
+  .scrollIndicatorIcon {
+    margin-left: -2rem;
+    width: 4rem;
+  }
+  .comingSoonLabel h3 {
+    font-size: 2.8rem;
+  }
 }

@@ -1,16 +1,18 @@
 .homeWithNavbar {
   background-size: cover;
+  position: relative;
 }
 
 .fullHome {
   display: flex;
+  min-height: 95vh;
 }
 
 .homeWithNavbar nav {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  position: fixed;
+  position: absolute;
   width: 100%;
   padding: 0 7vw;
 }
@@ -57,10 +59,9 @@
 }
 
 .home .homeTitleDiv {
-  min-height: 17vh;
   display: flex;
   flex-direction: column;
-  margin-top: 10.5rem;
+  margin-top: 24%;
 }
 
 .home .homeTitleDiv h1::first-letter {
@@ -70,10 +71,11 @@
 .home .homeIntroductionDiv {
   display: flex;
   flex-direction: column;
-  margin: 7.5rem 0;
+  margin-top: 15%;
 }
 
 .home .aboutMeButton {
+  margin-top: 13%;
   padding: var(--button-padding);
   border-radius: var(--custom-border-radius);
   border: 0;
@@ -138,6 +140,14 @@
 
 .meImgContainer {
   display: none;
+}
+
+.scrollIndicatorIcon {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -3rem;
+  width: 6rem;
 }
 
 @media (min-width: 768px) {
