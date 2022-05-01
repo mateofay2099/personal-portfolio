@@ -30,7 +30,7 @@ const Portfolio = () => {
           ))}
         </AwesomeSlider>
       ) : (
-        <div className="portfolioCardsContainer">
+        <div className="portfolioCardsContainer" data-cy="desktopPortfolioCards">
           {CARDS.map(({ descriptionKey, key, onlySkeleton, repoLink, titleKey }) => (
             <div className="portfolioCardDiv" data-cy="portfolioCardDiv" key={key}>
               <PortfolioCard
