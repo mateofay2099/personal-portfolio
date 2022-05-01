@@ -7,6 +7,7 @@ const selectors = {
   aboutMeButton: '[data-cy=aboutMeButton]',
   aboutMeModal: '[data-cy=aboutMeModal]',
   aboutMeModalCloseButton: '[data-cy=aboutMeModal-closeButton]',
+  homeMeImg: '[data-cy=homeMeImg]',
 };
 
 describe('Home tests', () => {
@@ -43,5 +44,17 @@ describe('Home tests', () => {
 
     cy.get(selectors.contactSection).click();
     cy.get(selectors.aboutMeModal).should('not.exist');
+  });
+
+  it('Should NOT show new home image on smaller screen', () => {
+    cy.viewport(767, 700);
+    cy.visit('/');
+    cy.get(selectors.homeMeImg).should('not.be.visible');
+  });
+
+  it('Should show new home image on bigger screen', () => {
+    cy.viewport(768, 700);
+    cy.visit('/');
+    cy.get(selectors.homeMeImg).should('be.visible');
   });
 });

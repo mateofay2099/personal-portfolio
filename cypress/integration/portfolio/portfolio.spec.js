@@ -22,6 +22,10 @@ describe('Portfolio Cards tests', () => {
 
   it('Should redirect to correct link', () => {
     cy.visit('/');
-    cy.get(selectors.portfolioCardDiv).find(selectors.portfolioCard).should('have.attr', 'href', displayedCard.repoLink);
+    cy.get(selectors.portfolioCardDiv)
+      .find(selectors.portfolioCard)
+      .should('have.attr', 'href', displayedCard.repoLink);
   });
+
+  // TODO: Add tests for desktop mode
 });

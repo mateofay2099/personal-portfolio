@@ -13,6 +13,6 @@ const languagesMessages = {
 
 export const getMessageByLanguage = (language, messageKey, params) => {
   return languagesMessages[language][messageKey]
-  ? languagesMessages[language][messageKey](params)
-  : '';
+    ? languagesMessages[language][messageKey](params)
+    : '';
 };

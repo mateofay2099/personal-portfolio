@@ -1,11 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" viewBox="0 0 38 36">
-  <g id="Group_6" data-name="Group 6" transform="translate(6.576 8.835)">
-    <path id="Path_8" data-name="Path 8" d="M0,2.524H24.849" transform="translate(0 -2.524)" fill="none" stroke="current" stroke-linecap="round" stroke-width="2.5"/>
-    <path id="Path_9" data-name="Path 9" d="M0,0H24.848" transform="translate(0 9.165)" fill="none" stroke="current" stroke-linecap="round" stroke-width="2.5"/>
-    <line id="Line_3" data-name="Line 3" x2="24.848" transform="translate(0 18.329)" fill="none" stroke="current" stroke-linecap="round" stroke-width="2.5"/>
-  </g>
-  <g id="Rectangle_5" data-name="Rectangle 5" fill="none" stroke="current" stroke-width="0.4">
-    <rect width="38" height="36" rx="5" stroke="none"/>
-    <rect x="0.2" y="0.2" width="37.6" height="35.6" rx="4.8" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="32.168" height="22.923" viewBox="0 0 32.168 22.923">
+  <g id="Group_6" data-name="Group 6" transform="translate(1.5 1.5)">
+    <path id="Path_8" data-name="Path 8" d="M0,2.524H29.168" transform="translate(0 -2.524)" fill="none" stroke="current" stroke-linecap="round" stroke-width="3"/>
+    <path id="Path_9" data-name="Path 9" d="M0,0H29.167" transform="translate(0 9.962)" fill="none" stroke="current" stroke-linecap="round" stroke-width="3"/>
+    <line id="Line_3" data-name="Line 3" x2="29.167" transform="translate(0 19.923)" fill="none" stroke="current" stroke-linecap="round" stroke-width="3"/>
   </g>
 </svg>

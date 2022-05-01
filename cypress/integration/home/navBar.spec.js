@@ -14,7 +14,11 @@ const selectors = {
   spanishOption: '[data-cy=languageSelector-spanishOption]',
 };
 
-describe('NavBar tests', () => {
+describe('NavBar tests --Mobile', () => {
+  beforeEach(() => {
+    cy.viewport(767, 700);
+  });
+
   it('Should show a modal with proper navBar options and hide button', () => {
     cy.visit('/');
     cy.get(selectors.navBarButton).click();
@@ -25,7 +29,6 @@ describe('NavBar tests', () => {
     cy.get(selectors.languageSelector).should('be.visible');
 
     cy.get(selectors.navBarButton).should('not.be.visible');
-
   });
 
   it('Should close options when clicking somewhere other than the selector', () => {
@@ -33,7 +36,7 @@ describe('NavBar tests', () => {
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.navBarOptions).should('be.visible');
     cy.get(selectors.experienceOption).click();
-    cy.location('hash').should('eq', '#experience')
+    cy.location('hash').should('eq', '#experience');
     cy.get(selectors.navBarOptions).should('not.exist');
 
     cy.get(selectors.navBarButton).click();
@@ -45,15 +48,15 @@ describe('NavBar tests', () => {
     cy.visit('/');
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.experienceOption).click();
-    cy.location('hash').should('eq', '#experience')
+    cy.location('hash').should('eq', '#experience');
 
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.portfolioOption).click();
-    cy.location('hash').should('eq', '#portfolio')
+    cy.location('hash').should('eq', '#portfolio');
 
     cy.get(selectors.navBarButton).click();
     cy.get(selectors.contactOption).click();
-    cy.location('hash').should('eq', '#contact')
+    cy.location('hash').should('eq', '#contact');
   });
 
   it('Should show a language selector with correct disabled default option', () => {
@@ -90,4 +93,21 @@ describe('NavBar tests', () => {
     cy.get(selectors.languageSelector).invoke('val').should('eq', SPANISH_VALUE);
     cy.get(selectors.languageSelectorSelectedOption).should('have.text', spanishMessage);
   });
+});
+
+describe('NavBar tests --Desktop', () => {
+  beforeEach(() => {
+    cy.viewport(768, 700);
+  });
+
+  it('Should display options with no navBar button', () => {
+    cy.get(selectors.experienceOption).should('be.visible');
+    cy.get(selectors.portfolioOption).should('be.visible');
+    cy.get(selectors.contactOption).should('be.visible');
+    cy.get(selectors.languageSelector).should('be.visible');
+
+    cy.get(selectors.navBarButton).should('not.be.visible');
+  });
+
+  // TODO: Add tests for desktop mode
 });

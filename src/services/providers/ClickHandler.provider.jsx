@@ -10,17 +10,15 @@ export const ClickHandlerProvider = ({ children }) => {
   const addFunctionToExecute = (functionToAdd) => {
     setFunctionsToExecute((allFunctions) => [...allFunctions, functionToAdd]);
   };
-  const removeFunctionToExecute = (functionToRemove) => {
-    setFunctionsToExecute((allFunctions) =>
-      allFunctions.filter((func) => func !== functionToRemove)
-    );
-  };
+
+  const resetFunctionsToExecute = () => setFunctionsToExecute([]);
 
   const executeAllFunctions = () => {
     functionsToExecute.forEach((func) => func());
+    resetFunctionsToExecute();
   };
 
-  const clickHandlerContext = { addFunctionToExecute, removeFunctionToExecute };
+  const clickHandlerContext = { addFunctionToExecute, resetFunctionsToExecute };
 
   return (
     <ClickHandlerContext.Provider value={clickHandlerContext}>

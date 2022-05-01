@@ -2,7 +2,8 @@
   padding-bottom: calc(5vh + 4rem);
 }
 
-.portfolio, .portfolio * {
+.portfolio,
+.portfolio * {
   background-color: var(--customBlack);
 }
 
@@ -11,11 +12,11 @@
   padding-bottom: 4rem;
 }
 
-.portfolio .slider nav button[class*="--active"] {
+.portfolio .slider nav button[class*='--active'] {
   background-color: var(--secondary);
 }
 
-.portfolio .slider .portfolioCardDiv {
+.portfolio .portfolioCardDiv {
   height: 100%;
   width: 100%;
   display: flex;
@@ -24,7 +25,7 @@
   padding-top: 3rem;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCard {
+.portfolio .portfolioCardDiv .portfolioCard {
   background-color: transparent;
   width: 95%;
   display: flex;
@@ -37,12 +38,13 @@
   box-shadow: var(--custom-box-shadow);
 }
 
-.portfolio .slider .portfolioCardDiv a:active, .portfolio .slider .portfolioCardDiv a:active * {
+.portfolio .portfolioCardDiv a:active,
+.portfolio .portfolioCardDiv a:active * {
   background: var(--primary);
   color: var(--customBlack);
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCardDescription {
+.portfolio .portfolioCardDiv .portfolioCardDescription {
   width: 100%;
   margin: 9rem 0;
   background-color: transparent;
@@ -53,7 +55,7 @@
   text-align: center;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCardSkeletonDiv {
+.portfolio .portfolioCardDiv .portfolioCardSkeletonDiv {
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -62,29 +64,29 @@
   width: 100%;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCardSkeletonDiv div {
+.portfolio .portfolioCardDiv .portfolioCardSkeletonDiv div {
   background-color: var(--text);
   border-radius: var(--custom-border-radius);
   margin-top: 1rem;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton1,
-.portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
+.portfolio .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton1,
+.portfolio .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
   width: 80%;
   height: 1.6rem;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
+.portfolio .portfolioCardDiv .portfolioCard .portfolioCardTitleSkeleton2 {
   width: 65%;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton1,
-.portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
+.portfolio .portfolioCardDiv .portfolioCardDescriptionSkeleton1,
+.portfolio .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
   width: 87%;
   height: 1.2rem;
 }
 
-.portfolio .slider .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
+.portfolio .portfolioCardDiv .portfolioCardDescriptionSkeleton2 {
   width: 80%;
 }
 
@@ -105,4 +107,50 @@
   background: transparent;
   color: var(--primary);
   font-size: 3.3rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio,
+  .portfolio * {
+    background-color: transparent;
+  }
+
+  .portfolio {
+    background-color: var(--customBlack);
+  }
+
+  .portfolioCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+  }
+
+  .portfolio .portfolioCardDiv {
+    width: 25rem;
+    height: 40rem;
+    border-radius: var(--custom-border-radius);
+    box-shadow: var(--custom-box-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio .portfolioCardDiv .portfolioCard {
+    min-height: auto;
+    margin-top: 7%;
+    box-shadow: 0 0.3rem 0.3rem -0.3rem var(--primary);
+    border-radius: 0;
+  }
+
+  .portfolio .portfolioCardDiv:hover {
+    background-color: var(--blurredPrimary);
+  }
+
+  .fullScreenShadow {
+    margin-top: -3rem;
+    border-radius: var(--custom-border-radius);
+  }
+
+  .comingSoonLabel {
+    /* width: 100%; */
+  }
 }
