@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <div className="homeWithNavbar" style={{ backgroundImage }}>
+    <div className="homeWithNavbar" data-cy="homeWithNavbarSection" style={{ backgroundImage }}>
       <NavBar />
       <div className="fullHome">
         <section className="home">

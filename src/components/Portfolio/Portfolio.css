@@ -17,6 +17,7 @@
 }
 
 .portfolio .portfolioCardDiv {
+  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
@@ -130,7 +131,6 @@
     height: 40rem;
     border-radius: var(--custom-border-radius);
     box-shadow: var(--custom-box-shadow);
-    position: relative;
     overflow: hidden;
   }
 

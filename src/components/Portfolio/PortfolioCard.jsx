@@ -6,10 +6,10 @@ const PortfolioCards = ({ description, onlySkeleton, repoLink, title }) => {
     return (
       <>
         <div className="fullScreenShadow" />
-        <div className="comingSoonLabel">
+        <div className="comingSoonLabel" data-cy="comingSoonLabel">
           <h3>{title}</h3>
         </div>
-        <a className="portfolioCard" href={repoLink}>
+        <a className="portfolioCard" data-cy="portfolioCard">
           <div className="portfolioCardSkeletonDiv">
             <div className="portfolioCardTitleSkeleton1" />
             <div className="portfolioCardTitleSkeleton2" />

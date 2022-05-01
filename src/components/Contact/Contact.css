@@ -12,7 +12,8 @@
   align-items: center;
 }
 
-.contact form input, .contact form .messageInputDiv {
+.contact form input,
+.contact form .messageInputDiv {
   background-color: var(--customBlack);
   border: 0.1rem solid var(--primary);
   width: 100%;
@@ -20,7 +21,8 @@
   padding: var(--custom-padding);
 }
 
-.contact form input, .contact form .messageInputDiv textarea {
+.contact form input,
+.contact form .messageInputDiv textarea {
   background-color: var(--customBlack);
   font-size: 1.6rem;
   color: var(--text);

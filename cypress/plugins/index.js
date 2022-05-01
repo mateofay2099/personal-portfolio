@@ -18,12 +18,10 @@
 // eslint-disable-next-line no-unused-vars
 const webpack = require('@cypress/webpack-preprocessor');
 
-
 module.exports = (on) => {
   const options = {
-
-      webpackOptions: require('../../webpack.config.base'),
-      watchOptions: {},
+    webpackOptions: require('../../webpack.config.base'),
+    watchOptions: {},
   };
 
   on('file:preprocessor', webpack(options));

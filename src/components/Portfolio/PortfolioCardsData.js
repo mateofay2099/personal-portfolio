@@ -7,20 +7,6 @@ export const CARDS = [
     titleKey: 'portfolio.card.personalPortfolio.title',
   },
   {
-    descriptionKey: 'portfolio.card.personalPortfolio.description',
-    key: 'portfolioCards_portfolioWebsite2',
-    onlySkeleton: false,
-    repoLink: 'https://github.com/mateofay2099/personal-portfolio',
-    titleKey: 'portfolio.card.personalPortfolio.title',
-  },
-  {
-    descriptionKey: 'portfolio.card.personalPortfolio.description',
-    key: 'portfolioCards_portfolioWebsite3',
-    onlySkeleton: false,
-    repoLink: 'https://github.com/mateofay2099/personal-portfolio',
-    titleKey: 'portfolio.card.personalPortfolio.title',
-  },
-  {
     descriptionKey: '',
     onlySkeleton: true,
     key: 'portfolioCards_comingSoon',
