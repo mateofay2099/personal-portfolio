@@ -12,7 +12,6 @@ const selectors = {
   contactOption: (option) => `[data-cy=contactOption-${option}]`,
   customizeInput: (themeKey) => `[data-cy=customizeInput-${themeKey}]`,
   customizeInputLabel: (themeKey) => `[data-cy=customizeInputLabel-${themeKey}]`,
-  colorPicker: (themeKey) => `[data-cy=colorPicker-${themeKey}]`,
 };
 
 describe('Footer tests', () => {
