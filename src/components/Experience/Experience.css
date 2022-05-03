@@ -1,5 +1,5 @@
 .experience {
-  background-color: var(--customBlack);
+  background-color: var(--background);
 }
 
 .experience .experienceCardsDiv {
@@ -12,7 +12,7 @@
 .experience .experienceCard {
   border: 0.1rem solid var(--customBlack);
   position: relative;
-  box-shadow: var(--custom-box-shadow);
+  box-shadow: var(--complete-custom-box-shadow);
   display: flex;
 }
 
@@ -25,7 +25,7 @@
   border-top-right-radius: 4.2rem;
   right: 10%;
   transform: translate(-50%, -98%);
-  box-shadow: var(--custom-box-shadow);
+  box-shadow: var(--complete-custom-box-shadow);
 }
 
 .experience .experienceCard,
@@ -36,7 +36,7 @@
 .experience .experienceCard,
 .experienceCard::after,
 .experienceCard::before {
-  background-color: var(--customBlack);
+  background-color: var(--background);
 }
 
 .experience .experienceCard::after {

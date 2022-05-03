@@ -1,7 +1,7 @@
 import React from 'react';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useLanguageContext } from '@providers/Language.provider';
-import CloseButton from '@icons/closeButton.svg';
+import CloseButton from '@myIcons/closeButton.svg';
 import './Home.css';
 
 const AboutMeModal = ({ onCloseButtonClick }) => {

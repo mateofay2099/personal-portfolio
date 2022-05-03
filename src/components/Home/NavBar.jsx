@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import NavBarButton from '@icons/navBarButton.svg';
+import NavBarButton from '@myIcons/navBarButton.svg';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';

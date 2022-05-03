@@ -28,7 +28,11 @@ const ThemeHandler = ({ children }) => {
     });
     document.documentElement.style.setProperty('--primary-font', PRIMARY_FONT);
     document.documentElement.style.setProperty('--custom-border-radius', CUSTOM_BORDER_RADIUS);
-    document.documentElement.style.setProperty('--custom-box-shadow', COMPLETE_CUSTOM_BOX_SHADOW);
+    document.documentElement.style.setProperty('--custom-box-shadow', CUSTOM_BOX_SHADOW);
+    document.documentElement.style.setProperty(
+      '--complete-custom-box-shadow',
+      COMPLETE_CUSTOM_BOX_SHADOW
+    );
     document.documentElement.style.setProperty('--custom-padding', CUSTOM_PADDING);
     document.documentElement.style.setProperty('--button-padding', BUTTON_PADDING);
   }, []);
