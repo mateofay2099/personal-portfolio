@@ -2,7 +2,7 @@ import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
 
 const selectors = {
   homeSection: '[data-cy=homeWithNavbarSection]',
-  contactSection: '[data-cy=contactSection]',
+  experienceSection: '[data-cy=experienceSection]',
   navBarButton: '[data-cy=navBarButton]',
   navBarOptions: '[data-cy=navBarOptions]',
   experienceOption: '[data-cy=navBar-experienceOption]',
@@ -82,7 +82,7 @@ describe('NavBar tests --Mobile', () => {
     cy.get(selectors.navBarOptions).should('not.exist');
 
     cy.get('@optionsContainer').click();
-    cy.get(selectors.contactSection).click();
+    cy.get(selectors.experienceSection).click();
     cy.get(selectors.navBarOptions).should('not.exist');
   });
 

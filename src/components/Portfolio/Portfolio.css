@@ -4,7 +4,7 @@
 
 .portfolio,
 .portfolio * {
-  background-color: var(--customBlack);
+  background-color: var(--background);
 }
 
 .portfolio .slider {
@@ -36,7 +36,7 @@
   padding: var(--custom-padding);
   border-radius: var(--custom-border-radius);
   text-align: center;
-  box-shadow: var(--custom-box-shadow);
+  box-shadow: var(--complete-custom-box-shadow);
 }
 
 .portfolio .portfolioCardDiv a:active,
@@ -117,7 +117,7 @@
   }
 
   .portfolio {
-    background-color: var(--customBlack);
+    background-color: var(--background);
   }
 
   .portfolioCardsContainer {
@@ -130,7 +130,7 @@
     width: 25rem;
     height: 40rem;
     border-radius: var(--custom-border-radius);
-    box-shadow: var(--custom-box-shadow);
+    box-shadow: var(--complete-custom-box-shadow);
     overflow: hidden;
   }
 

@@ -1,0 +1,167 @@
+main footer {
+  padding: 5rem 7vw;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  position: relative;
+  min-height: 100%;
+  height: max-content;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .contact .contactTitle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+footer .contact .contactOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .contactOptions a {
+  display: flex;
+  align-items: center;
+}
+
+footer .contactOptions a img {
+  width: 2.5rem;
+}
+footer .contactOptions a .gmailLogo {
+  margin-left: 0.2rem;
+  width: 2rem;
+}
+
+footer .contactOptions a p {
+  padding-left: 1rem;
+  color: var(--customBlack);
+}
+
+footer .customizePageSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+footer .customizePageSection h5 {
+  margin-left: 0.2rem;
+}
+
+footer .customizePageSection button {
+  min-width: max-content;
+  width: 37%;
+  padding: var(--custom-padding);
+  border: 0;
+  background: linear-gradient(to right, var(--secondary), var(--primary));
+  border-radius: var(--custom-border-radius);
+  box-shadow: var(--custom-box-shadow) var(--secondary);
+  margin: 0 auto;
+}
+
+footer .customizeModalDiv {
+  min-height: 100%;
+  height: max-content;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer .customizeModal {
+  min-height: 85%;
+  height: max-content;
+  margin-top: 3rem;
+  width: 90%;
+  background-color: var(--background);
+  box-shadow: var(--complete-custom-box-shadow);
+  border-radius: var(--custom-border-radius);
+  position: relative;
+  padding: var(--custom-padding);
+  padding-top: 0;
+  z-index: 10;
+}
+
+footer .closeModalButtonDiv {
+  position: absolute;
+  top: 2rem;
+  right: 2.3rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  z-index: 3;
+  border: 0.1rem solid var(--primary);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+footer .closeModalButtonDiv .closeModalButton {
+  width: 100%;
+}
+
+footer .customizeModal .customizeInputs {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+footer .customizeModal .customizeInputs .customizeInput {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+footer .customizeModal .customizeInputs .customizeInput input {
+  background-color: var(--background);
+  box-shadow: var(--complete-custom-box-shadow);
+  border: 0;
+}
+
+footer .customizeModal .customizeInputs .customizeInput .colorPicker {
+  position: absolute !important;
+  box-shadow: var(--complete-custom-box-shadow);
+  background: var(--background);
+  bottom: 3.5rem;
+  right: 0;
+  z-index: 3;
+}
+
+footer .customizeModal .customizeInputs .customizeInput .colorPicker > div {
+  left: auto !important;
+  top: auto !important;
+  right: 1rem;
+  bottom: -1.4rem;
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  main footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  footer .customizePageSection {
+    position: relative;
+    flex-direction: column;
+    order: 1;
+  }
+
+  footer .customizeModalDiv {
+    width: 30rem;
+  }
+
+  footer .contact {
+    order: 2;
+  }
+}

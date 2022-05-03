@@ -39,11 +39,11 @@ export default {
   'portfolio.card.personalPortfolio.description': () =>
     'Click on the card to see the GitHub repository for this website',
 
-  // Contact
-  'contact.title': () => 'Stay in touch',
-  'contact.description': () =>
-    'If you are interested in my CV, want to develop a web or mobile app, or need any kind of help, feel free to reach out!',
-  'contact.emailInput.placeholder': () => 'Your email address',
-  'contact.messageInput.placeholder': () => 'Your Message...',
-  'contact.contactMe.button': () => 'Contact Me',
+  // Footer
+  'footer.customizeTitle': () => 'Do not like the page?',
+  'footer.customizeButton': () => 'Customize it',
+  'footer.customizableOption.primary': () => 'Primary',
+  'footer.customizableOption.secondary': () => 'Secondary',
+  'footer.customizableOption.background': () => 'Background',
+  'footer.customizableOption.text': () => 'Text',
 };

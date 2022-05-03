@@ -5,7 +5,7 @@ import { useLanguageContext } from '@providers/Language.provider';
 import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
 import homeBackground from '@images/homeBackground.jpg';
 import meImg from '@images/me.jpeg';
-import ScrollIndicator from '@icons/scrollIndicator.svg';
+import ScrollIndicator from '@myIcons/scrollIndicator.svg';
 import NavBar from './NavBar';
 import AboutMeModal from './AboutMeModal';
 import './Home.css';

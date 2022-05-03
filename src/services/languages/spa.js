@@ -39,11 +39,11 @@ export default {
   'portfolio.card.personalPortfolio.description': () =>
     'Clickee en la carta para ver el repositorio de Github correspondiente a este sitio web',
 
-  // Contact
-  'contact.title': () => 'Sigamos en contacto',
-  'contact.description': () =>
-    'Si estás interesado en mi CV, querés desarrollar una aplicación web o móvil, o necesitás cualquier tipo de ayuda, sentite libre de comunicarte!',
-  'contact.emailInput.placeholder': () => 'Tu correo electrónico',
-  'contact.messageInput.placeholder': () => 'Escribe un mensaje...',
-  'contact.contactMe.button': () => 'Contactame',
+  // Footer
+  'footer.customizeTitle': () => 'No te gusta la página?',
+  'footer.customizeButton': () => 'Personalizala',
+  'footer.customizableOption.primary': () => 'Primario',
+  'footer.customizableOption.secondary': () => 'Secundario',
+  'footer.customizableOption.background': () => 'Fondo',
+  'footer.customizableOption.text': () => 'Texto',
 };

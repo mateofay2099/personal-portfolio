@@ -1,5 +1,5 @@
-import internationalIcon from '@icons/cards/international.png';
-import responsiveIcon from '@icons/cards/responsive.png';
+import internationalIcon from '@myIcons/cards/international.png';
+import responsiveIcon from '@myIcons/cards/responsive.png';
 
 export const CARDS = [
   {
