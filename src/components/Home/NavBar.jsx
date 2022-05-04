@@ -58,11 +58,6 @@ const NavBar = () => {
           {getMessage('portfolio.title')}
         </a>
       </li>
-      <li>
-        <a data-cy="navBar-contactOption" href="#contact">
-          {getMessage('home.navBar.contact')}
-        </a>
-      </li>
       <li onClick={(e) => e.stopPropagation()}>
         <select
           data-cy="navBar-languageSelector"
