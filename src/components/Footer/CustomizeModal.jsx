@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CustomModal from '@components/Common/CustomModal/CustomModal';
 import { useLanguageContext } from '@providers/Language.provider';
 import useWindowDimensions from '@hooks/useWindowDimensions';
@@ -13,6 +13,7 @@ export const customizeInputs = [
 ];
 
 const CustomizeModal = ({ isOpen, onCloseButtonClick }) => {
+  const [colorPickerOpened, setColorPickerOpened] = useState(null);
   const { getMessage } = useLanguageContext();
   const WIDTH_THRESHOLD = 768;
   const { width } = useWindowDimensions();
@@ -27,13 +28,18 @@ const CustomizeModal = ({ isOpen, onCloseButtonClick }) => {
     <CustomModal
       customClass="customizeModal"
       customStyle={customStyle}
-      data-cy="customizeModal"
       isOpen={isOpen}
       onRequestClose={onCloseButtonClick}
       showCloseButton>
       <div className="customizeInputs">
         {customizeInputs.map(({ labelKey, themeKey }) => (
-          <CustomizeInput key={themeKey} label={getMessage(labelKey)} themeKey={themeKey} />
+          <CustomizeInput
+            colorPickerOpened={colorPickerOpened === themeKey}
+            key={themeKey}
+            label={getMessage(labelKey)}
+            setColorPickerOpened={setColorPickerOpened}
+            themeKey={themeKey}
+          />
         ))}
       </div>
     </CustomModal>

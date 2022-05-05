@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GithubPicker } from 'react-color';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { AVAILABLE_COLORS } from '@utils/constants';
 import './Footer.css';
 
-const CustomizeInput = ({ label, themeKey }) => {
+const CustomizeInput = ({ colorPickerOpened, label, setColorPickerOpened, themeKey }) => {
   const { currentTheme, setCurrentTheme } = useThemeContext();
   const { addFunctionToExecute } = useClickHandlerContext();
-  const [showColorPicker, setShowColorPicker] = useState(false);
   const inputId = `customizeInput-${label}`;
 
-  const closeColorPicker = () => setShowColorPicker(false);
+  const closeColorPicker = () => setColorPickerOpened(null);
 
   const handleInputClick = (e) => {
     e.stopPropagation();
     e.preventDefault();
-    setShowColorPicker(true);
+    setColorPickerOpened(themeKey);
     addFunctionToExecute(closeColorPicker);
   };
 
@@ -37,7 +36,7 @@ const CustomizeInput = ({ label, themeKey }) => {
         onClick={handleInputClick}
         onChange={() => {}}
       />
-      {showColorPicker && (
+      {colorPickerOpened && (
         <GithubPicker
           className="colorPicker"
           colors={AVAILABLE_COLORS}

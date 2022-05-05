@@ -9,7 +9,6 @@ const AboutMeModal = ({ isOpen, onCloseButtonClick }) => {
   return (
     <CustomModal
       customClass="aboutMeModal"
-      data-cy="aboutMeModal"
       isOpen={isOpen}
       onRequestClose={onCloseButtonClick}
       showCloseButton>

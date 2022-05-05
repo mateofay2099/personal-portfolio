@@ -5,7 +5,6 @@ import { appTheme } from '@services/theming/ThemesDefinition';
 
 const selectors = {
   footer: '[data-cy=footer]',
-  homeSection: '[data-cy=homeWithNavbarSection]',
   customizeButton: '[data-cy=customizeButton]',
   customizeModal: '[data-cy=customizeModal]',
   customizeModalCloseButton: '[data-cy=customizeModal-closeButton]',
@@ -39,7 +38,7 @@ describe('Footer tests', () => {
     cy.get(selectors.customizeButton).click();
     cy.get(selectors.customizeModal).should('be.visible');
 
-    cy.get(selectors.homeSection).click();
+    cy.clickOutside();
     cy.get(selectors.customizeModal).should('not.exist');
 
     cy.get(selectors.customizeButton).click();

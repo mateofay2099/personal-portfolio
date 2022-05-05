@@ -8,7 +8,7 @@ import './CustomModal.css';
 const CustomModal = ({
   children,
   closeButtonStyle = {},
-  customClass = '',
+  customClass = 'modal',
   isOpen,
   onRequestClose,
   showCloseButton = false,
@@ -44,7 +44,6 @@ const CustomModal = ({
     <Modal
       className={`modal ${customClass}`}
       closeTimeoutMS={1000}
-      data-cy={customClass}
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       style={defaultStyles}>
@@ -52,14 +51,14 @@ const CustomModal = ({
         <div className="closeModalButtonDiv" style={closeButtonStyle}>
           <CloseButton
             className="closeModalButton"
-            data-cy="modal-closeButton"
+            data-cy={`${customClass}-closeButton`}
             fill={closeModalButtonColor}
             onClick={onRequestClose}
             stroke={closeModalButtonColor}
           />
         </div>
       )}
-      {children}
+      <div data-cy={customClass}>{children}</div>
     </Modal>
   );
 };

@@ -8,6 +8,7 @@ import {
   CUSTOM_PADDING,
   PRIMARY_FONT,
 } from '@utils/constants';
+import hexToRGBA from '@utils/hexToRgba';
 
 const ThemeHandler = ({ children }) => {
   const { currentTheme } = useThemeContext();
@@ -18,6 +19,10 @@ const ThemeHandler = ({ children }) => {
     Object.entries(currentTheme).forEach(([key, value]) => {
       document.documentElement.style.setProperty(`--${key}`, value);
     });
+    document.documentElement.style.setProperty(
+      '--blurredPrimary',
+      hexToRGBA(currentTheme.primary, 0.7)
+    );
   }, [currentTheme]);
 
   useEffect(() => {

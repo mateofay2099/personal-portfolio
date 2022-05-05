@@ -43,7 +43,6 @@ const NavBar = () => {
     if (shouldOptionsAlwaysBeDisplayed) {
       resetFunctionsToExecute();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldOptionsAlwaysBeDisplayed, width]);
 
   const renderNavBarOptions = () => (

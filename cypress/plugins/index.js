@@ -15,7 +15,6 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-// eslint-disable-next-line no-unused-vars
 const webpack = require('@cypress/webpack-preprocessor');
 
 module.exports = (on) => {
