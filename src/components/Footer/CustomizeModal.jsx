@@ -1,7 +1,7 @@
 import React from 'react';
-import { useThemeContext } from '@providers/Theming.provider.jsx';
+import CustomModal from '@components/Common/CustomModal/CustomModal';
 import { useLanguageContext } from '@providers/Language.provider';
-import CloseButton from '@myIcons/closeButton.svg';
+import useWindowDimensions from '@hooks/useWindowDimensions';
 import CustomizeInput from './CustomizeInput';
 import './Footer.css';
 
@@ -12,31 +12,31 @@ export const customizeInputs = [
   { labelKey: 'footer.customizableOption.text', themeKey: 'text' },
 ];
 
-const CustomizeModal = ({ onCloseButtonClick }) => {
-  const { currentTheme } = useThemeContext();
+const CustomizeModal = ({ isOpen, onCloseButtonClick }) => {
   const { getMessage } = useLanguageContext();
+  const WIDTH_THRESHOLD = 768;
+  const { width } = useWindowDimensions();
+  const isSmallerDevice = width < WIDTH_THRESHOLD;
 
-  const closeModalButtonColor = currentTheme.primary;
+  const customStyle = {
+    minWidth: isSmallerDevice ? 'calc(100% - 14vw)' : '40%',
+    width: 'max-content',
+  };
 
   return (
-    <div className="customizeModalDiv">
-      <div data-cy="customizeModal" className="customizeModal" onClick={(e) => e.stopPropagation()}>
-        <div className="closeModalButtonDiv">
-          <CloseButton
-            className="closeModalButton"
-            data-cy="customizeModal-closeButton"
-            fill={closeModalButtonColor}
-            onClick={onCloseButtonClick}
-            stroke={closeModalButtonColor}
-          />
-        </div>
-        <div className="customizeInputs">
-          {customizeInputs.map(({ labelKey, themeKey }) => (
-            <CustomizeInput key={themeKey} label={getMessage(labelKey)} themeKey={themeKey} />
-          ))}
-        </div>
+    <CustomModal
+      customClass="customizeModal"
+      customStyle={customStyle}
+      data-cy="customizeModal"
+      isOpen={isOpen}
+      onRequestClose={onCloseButtonClick}
+      showCloseButton>
+      <div className="customizeInputs">
+        {customizeInputs.map(({ labelKey, themeKey }) => (
+          <CustomizeInput key={themeKey} label={getMessage(labelKey)} themeKey={themeKey} />
+        ))}
       </div>
-    </div>
+    </CustomModal>
   );
 };
 

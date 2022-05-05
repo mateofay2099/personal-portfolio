@@ -86,56 +86,16 @@
   color: var(--customBlack);
 }
 
-.home .aboutMeModalDiv {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.home .aboutMeModal {
-  margin-top: 3rem;
-  height: 85%;
-  width: 90%;
-  background-color: var(--background);
-  box-shadow: var(--complete-custom-box-shadow);
-  border-radius: var(--custom-border-radius);
-  position: relative;
-  padding: var(--custom-padding);
-  padding-top: 0;
-  overflow-y: scroll;
-  z-index: 10;
-}
-
-.home .aboutMeModal .closeModalButtonDiv {
-  position: absolute;
-  top: 2rem;
-  right: 2.3rem;
-  width: 2.3rem;
-  height: 2.3rem;
-  z-index: 3;
-  border: 0.1rem solid var(--primary);
-  border-radius: 50%;
-  padding: 0.5rem;
-}
-
-.home .aboutMeModal .closeModalButtonDiv .closeModalButton {
-  width: 100%;
-}
-
-.home .aboutMeModal h2 {
+.aboutMeModal h2 {
   font-size: 2.3rem;
   margin-bottom: 5vh;
 }
 
-.home .aboutMeModal h2::after {
+.aboutMeModal h2::after {
   width: 5rem;
 }
 
-.home .aboutMeModal p {
+.aboutMeModal p {
   margin-top: 5rem;
 }
 

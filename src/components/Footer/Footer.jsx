@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';
 import igLogo from '@gifs/igLogo.gif';
 import gmailLogo from '@gifs/gmailLogo.gif';
@@ -40,17 +39,6 @@ export const contactOptions = [
 const Footer = () => {
   const [showCustomizeModal, setShowCustomizeModal] = useState(false);
   const { getMessage } = useLanguageContext();
-  const { addFunctionToExecute } = useClickHandlerContext();
-
-  const onClickOutsideModal = () => {
-    setShowCustomizeModal(false);
-  };
-
-  const handleCustomizeButtonClick = (e) => {
-    e.stopPropagation();
-    setShowCustomizeModal(true);
-    addFunctionToExecute(onClickOutsideModal);
-  };
 
   return (
     <footer data-cy="footer">
@@ -70,10 +58,13 @@ const Footer = () => {
 
       <div className="customizePageSection">
         <h5>{getMessage('footer.customizeTitle')}</h5>
-        <button data-cy="customizeButton" onClick={handleCustomizeButtonClick}>
+        <button data-cy="customizeButton" onClick={() => setShowCustomizeModal(true)}>
           <p>{getMessage('footer.customizeButton')}</p>
         </button>
-        {showCustomizeModal && <CustomizeModal onCloseButtonClick={onClickOutsideModal} />}
+        <CustomizeModal
+          isOpen={showCustomizeModal}
+          onCloseButtonClick={() => setShowCustomizeModal(false)}
+        />
       </div>
     </footer>
   );
