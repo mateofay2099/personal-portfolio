@@ -11,6 +11,7 @@ const selectors = {
   contactOption: (option) => `[data-cy=contactOption-${option}]`,
   customizeInput: (themeKey) => `[data-cy=customizeInput-${themeKey}]`,
   customizeInputLabel: (themeKey) => `[data-cy=customizeInputLabel-${themeKey}]`,
+  colorPicker: (themeKey) => `[data-cy=colorPicker-${themeKey}]`,
 };
 
 describe('Footer tests', () => {
@@ -59,6 +60,33 @@ describe('Footer tests', () => {
         'have.value',
         appTheme[themeKey].toLowerCase()
       );
+    });
+  });
+
+  it('Should show colorPicker when clicking on input and only one', () => {
+    cy.get(selectors.customizeButton).click();
+
+    customizeInputs.forEach(({ themeKey }) => {
+      cy.get(selectors.colorPicker(themeKey)).should('not.exist');
+      cy.get(selectors.customizeInput(themeKey)).click();
+      cy.get(selectors.colorPicker(themeKey)).should('be.visible');
+      customizeInputs
+        .filter((input) => input.themeKey !== themeKey)
+        .forEach(({ themeKey: otherInputThemeKey }) => {
+          cy.get(selectors.colorPicker(otherInputThemeKey)).should('not.exist');
+        });
+    });
+  });
+
+  it('Should hide color picker when clicking in the modal outside of it', () => {
+    cy.get(selectors.customizeButton).click();
+
+    customizeInputs.forEach(({ themeKey }) => {
+      cy.get(selectors.colorPicker(themeKey)).should('not.exist');
+      cy.get(selectors.customizeInput(themeKey)).click();
+      cy.get(selectors.colorPicker(themeKey)).should('be.visible');
+      cy.clickOutside(selectors.customizeModal);
+      cy.get(selectors.colorPicker(themeKey)).should('not.exist');
     });
   });
 });

@@ -1,3 +1,3 @@
-Cypress.Commands.add('clickOutside', function () {
-  return cy.get('body').click(0, 0);
+Cypress.Commands.add('clickOutside', function (outsideDivSelector = 'body') {
+  return cy.get(outsideDivSelector).click(0, 0);
 });

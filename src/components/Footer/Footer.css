@@ -100,12 +100,19 @@ footer .closeModalButtonDiv {
   border: 0;
 }
 
-.customizeModal .customizeInputs .customizeInput .colorPicker {
+
+.customizeModal .customizeInputs .customizeInput .colorPickerDiv {
   position: absolute !important;
-  box-shadow: var(--complete-custom-box-shadow);
-  background: var(--background);
   bottom: 3.5rem;
   right: 0;
+  z-index: 3;
+}
+
+.customizeModal .customizeInputs .customizeInput .colorPicker {
+  position: unset !important;
+  border-radius: var(--custom-border-radius);
+  box-shadow: var(--complete-custom-box-shadow);
+  background: var(--background);
   z-index: 3;
 }
 

@@ -37,13 +37,15 @@ const CustomizeInput = ({ colorPickerOpened, label, setColorPickerOpened, themeK
         onChange={() => {}}
       />
       {colorPickerOpened && (
-        <GithubPicker
-          className="colorPicker"
-          colors={AVAILABLE_COLORS}
-          id={inputId}
-          color={currentTheme[themeKey]}
-          onChange={onInputChange}
-        />
+        <div className="colorPickerDiv" data-cy={`colorPicker-${themeKey}`}>
+          <GithubPicker
+            className="colorPicker"
+            colors={AVAILABLE_COLORS}
+            id={inputId}
+            color={currentTheme[themeKey]}
+            onChange={onInputChange}
+          />
+        </div>
       )}
     </div>
   );
