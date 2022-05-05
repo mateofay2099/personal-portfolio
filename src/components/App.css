@@ -64,7 +64,7 @@ option {
   background: var(--customBlack);
 }
 
-section h2 {
+h2 {
   padding-top: 6vh;
   margin-bottom: 8vh;
   font-size: 3rem;
@@ -72,7 +72,7 @@ section h2 {
   position: relative;
 }
 
-section h2::after {
+h2::after {
   content: '';
   height: 0.27rem;
   width: 10rem;
@@ -120,7 +120,7 @@ section h2::after {
   #languageSelector {
     font-size: 1.7rem;
   }
-  .home .aboutMeModal h2 {
+  .aboutMeModal h2 {
     font-size: 1.9rem;
   }
   .scrollIndicatorIcon {

@@ -3,7 +3,7 @@ import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
 
 const selectors = {
   homeIntroduction1: '[data-cy=homeIntroduction1]',
-  experienceSection: '[data-cy=experienceSection]',
+  footer: '[data-cy=footer]',
   aboutMeButton: '[data-cy=aboutMeButton]',
   aboutMeModal: '[data-cy=aboutMeModal]',
   aboutMeModalCloseButton: '[data-cy=aboutMeModal-closeButton]',
@@ -42,7 +42,7 @@ describe('Home tests', () => {
     cy.get(selectors.aboutMeModal).click();
     cy.get(selectors.aboutMeModal).should('be.visible');
 
-    cy.get(selectors.experienceSection).click();
+    cy.clickOutside();
     cy.get(selectors.aboutMeModal).should('not.exist');
   });
 

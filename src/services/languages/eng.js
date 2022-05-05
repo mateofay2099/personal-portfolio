@@ -11,7 +11,6 @@ export default {
     'I love what I do and I am constantly looking for learning new technologies and improving my current skills.',
   'home.aboutMe.button': () => 'About Me',
 
-  'home.navBar.contact': () => 'Contact',
   'home.navBar.selectLanguage': () => 'Select Language',
   'home.navBar.english': () => 'English',
   'home.navBar.spanish': () => 'Spanish',

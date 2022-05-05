@@ -11,7 +11,6 @@ export default {
     'Me encanta lo que hago, y estoy constantemente buscando aprender nuevas tecnologías para incrementar mis conocimientos y mejorar mis habilidades.',
   'home.aboutMe.button': () => 'Acerca de mí',
 
-  'home.navBar.contact': () => 'Contacto',
   'home.navBar.selectLanguage': () => 'Cambiar Idioma',
   'home.navBar.english': () => 'Inglés',
   'home.navBar.spanish': () => 'Español',

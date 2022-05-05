@@ -43,7 +43,6 @@ const NavBar = () => {
     if (shouldOptionsAlwaysBeDisplayed) {
       resetFunctionsToExecute();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldOptionsAlwaysBeDisplayed, width]);
 
   const renderNavBarOptions = () => (
@@ -56,11 +55,6 @@ const NavBar = () => {
       <li>
         <a data-cy="navBar-portfolioOption" href="#portfolio">
           {getMessage('portfolio.title')}
-        </a>
-      </li>
-      <li>
-        <a data-cy="navBar-contactOption" href="#contact">
-          {getMessage('home.navBar.contact')}
         </a>
       </li>
       <li onClick={(e) => e.stopPropagation()}>

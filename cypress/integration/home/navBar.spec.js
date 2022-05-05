@@ -2,12 +2,10 @@ import { getMessageByLanguage, LANGUAGES } from '@services/languages/languages';
 
 const selectors = {
   homeSection: '[data-cy=homeWithNavbarSection]',
-  experienceSection: '[data-cy=experienceSection]',
   navBarButton: '[data-cy=navBarButton]',
   navBarOptions: '[data-cy=navBarOptions]',
   experienceOption: '[data-cy=navBar-experienceOption]',
   portfolioOption: '[data-cy=navBar-portfolioOption]',
-  contactOption: '[data-cy=navBar-contactOption]',
   languageSelector: '[data-cy=navBar-languageSelector]',
   languageSelectorSelectedOption: '[data-cy=navBar-languageSelector] option:selected',
   languageDefaultOption: '[data-cy=languageSelector-defaultOption]',
@@ -23,10 +21,6 @@ const navBarOptionsTests = {
     cy.get('@optionsContainer').click();
     cy.get(selectors.portfolioOption).click();
     cy.location('hash').should('eq', '#portfolio');
-
-    cy.get('@optionsContainer').click();
-    cy.get(selectors.contactOption).click();
-    cy.location('hash').should('eq', '#contact');
   },
   'Should show a language selector with correct disabled default option': () => {
     const defaultMessage = getMessageByLanguage(LANGUAGES.ENG, 'home.navBar.selectLanguage');
@@ -68,7 +62,6 @@ describe('NavBar tests --Mobile', () => {
     cy.get(selectors.navBarOptions).should('be.visible');
     cy.get(selectors.experienceOption).should('be.visible');
     cy.get(selectors.portfolioOption).should('be.visible');
-    cy.get(selectors.contactOption).should('be.visible');
     cy.get(selectors.languageSelector).should('be.visible');
 
     cy.get('@optionsContainer').should('not.be.visible');
@@ -82,7 +75,7 @@ describe('NavBar tests --Mobile', () => {
     cy.get(selectors.navBarOptions).should('not.exist');
 
     cy.get('@optionsContainer').click();
-    cy.get(selectors.experienceSection).click();
+    cy.clickOutside();
     cy.get(selectors.navBarOptions).should('not.exist');
   });
 
@@ -106,7 +99,6 @@ describe('NavBar tests --Desktop', () => {
   it('Should display options with no navBar button', () => {
     cy.get(selectors.experienceOption).should('be.visible');
     cy.get(selectors.portfolioOption).should('be.visible');
-    cy.get(selectors.contactOption).should('be.visible');
     cy.get(selectors.languageSelector).should('be.visible');
 
     cy.get(selectors.navBarButton).should('not.be.visible');

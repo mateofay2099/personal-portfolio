@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
-import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';
 import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
 import homeBackground from '@images/homeBackground.jpg';
@@ -15,18 +14,7 @@ const Home = () => {
   const { currentTheme } = useThemeContext();
   const backgroundImage = `linear-gradient(to bottom, transparent, ${currentTheme.customBlack}), url(${homeBackground})`;
   const age = getAge(MY_BIRTH_DATE);
-  const { addFunctionToExecute } = useClickHandlerContext();
   const { getMessage } = useLanguageContext();
-
-  const onClickOutsideModal = () => {
-    setShowAboutMeModal(false);
-  };
-
-  const handleAboutMeButtonClick = (e) => {
-    e.stopPropagation();
-    setShowAboutMeModal(true);
-    addFunctionToExecute(onClickOutsideModal);
-  };
 
   return (
     <div className="homeWithNavbar" data-cy="homeWithNavbarSection" style={{ backgroundImage }}>
@@ -47,10 +35,13 @@ const Home = () => {
           <button
             className="aboutMeButton"
             data-cy="aboutMeButton"
-            onClick={handleAboutMeButtonClick}>
+            onClick={() => setShowAboutMeModal(true)}>
             <p>{getMessage('home.aboutMe.button')}</p>
           </button>
-          {showAboutMeModal && <AboutMeModal onCloseButtonClick={onClickOutsideModal} />}
+          <AboutMeModal
+            isOpen={showAboutMeModal}
+            onCloseButtonClick={() => setShowAboutMeModal(false)}
+          />
         </section>
         <div className="meImgContainer">
           <figure>
