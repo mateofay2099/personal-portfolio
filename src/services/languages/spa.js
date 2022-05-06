@@ -32,13 +32,13 @@ export default {
   'experience.card.responsive': () =>
     'Desarrollado interfaces flexibles que se adaptan a distintos tamaños de pantalla. Gran experiencia en diseño responsivo, para asegurar una buena experiencia para el usuario, sin importar el tamaño de su pantalla o dispositivo.',
   'experience.card.courses': ({ coursesCount }) =>
-    `Constantly improving my skills, practicing in personal projects, solving algorithms, and taking courses to learn new things. Currently made over ${coursesCount} courses.`,
+    `Constantemente mejorando mis habilidades, practicando en proyectos personales, resolviendo algoritmos, y tomando cursos para aprender cosas nuevas. Actualmente, he tomado más de ${coursesCount} cursos.`,
   'experience.card.excellency': () =>
-    'Aiming for excellence. As an unquestionable rule, always best practices are applied. Clean and scalable code is guaranteed, with meticulous tests to avoid error prone code.',
+    'Apuntando a la excelencia. Como regla incuestionable, siempre las mejores prácticas son aplicadas. Un código limpio y escalable está garantizado, con tests meticulosos para evitar código propenso a errores.',
   'experience.card.agile': () =>
-    'Experienced working with Agile methodologies, mostly scrum. Application of agile fundamentals to ensure that the client gets clear notion of all progress, to be prepare for changes in product requirements, and to always prioritize providing value to the user.',
+    'Experimentado en trabajar con metodologías ágiles, mayormente scrum. Aplicación de fundamentos Agile para asegurar que el cliente tiene una clara noción de todo progreso, estar preparado para cambios en los requerimientos del producto, y para siempre priorizar el proveer valor para el usuario final.',
   'experience.card.fullstack': () =>
-    'Technical knowledge from web and mobile frontend design to backend logic, entities design and creation, database handling, data security and deployment on productive servers.',
+    'Conocimientos técnicos desde desarrollo frontend web y mobile hasta lógica de backend, diseño y creación de entidades, manejo de bases de datos y deploy en servidores productivos.',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',

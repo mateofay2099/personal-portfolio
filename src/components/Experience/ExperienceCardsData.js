@@ -1,35 +1,35 @@
-import internationalIcon from '@myIcons/cards/international.png';
-import responsiveIcon from '@myIcons/cards/responsive.png';
+import internationalIconSvg from '@myIcons/cards/international.svg';
 
 export const CARDS = [
   {
     descriptionKey: 'experience.card.responsive',
-    icon: responsiveIcon,
+    Icon: internationalIconSvg,
     key: 'experienceCards_responsive',
   },
   {
     descriptionKey: 'experience.card.international',
-    icon: internationalIcon,
+    Icon: internationalIconSvg,
     key: 'experienceCards_international',
   },
   {
     descriptionKey: 'experience.card.courses',
-    icon: internationalIcon,
+    descriptionTextParams: { coursesCount: 20 },
+    Icon: internationalIconSvg,
     key: 'experienceCards_courses',
   },
   {
     descriptionKey: 'experience.card.excellency',
-    icon: internationalIcon,
+    Icon: internationalIconSvg,
     key: 'experienceCards_excellency',
   },
   {
     descriptionKey: 'experience.card.agile',
-    icon: internationalIcon,
+    Icon: internationalIconSvg,
     key: 'experienceCards_agile',
   },
   {
     descriptionKey: 'experience.card.fullstack',
-    icon: internationalIcon,
+    Icon: internationalIconSvg,
     key: 'experienceCards_fullstack',
   },
 ];
