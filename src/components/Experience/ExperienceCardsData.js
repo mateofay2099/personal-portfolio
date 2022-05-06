@@ -12,4 +12,24 @@ export const CARDS = [
     icon: internationalIcon,
     key: 'experienceCards_international',
   },
+  {
+    descriptionKey: 'experience.card.courses',
+    icon: internationalIcon,
+    key: 'experienceCards_courses',
+  },
+  {
+    descriptionKey: 'experience.card.excellency',
+    icon: internationalIcon,
+    key: 'experienceCards_excellency',
+  },
+  {
+    descriptionKey: 'experience.card.agile',
+    icon: internationalIcon,
+    key: 'experienceCards_agile',
+  },
+  {
+    descriptionKey: 'experience.card.fullstack',
+    icon: internationalIcon,
+    key: 'experienceCards_fullstack',
+  },
 ];
