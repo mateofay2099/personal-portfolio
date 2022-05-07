@@ -31,6 +31,14 @@ export default {
     'Trabajado para clientes de distintos países alrededor del mundo. Con muy buenas habilidades de comunicación tanto en inglés como en español, he desarrollado aplicaciones para clientes de +8 distintos países.',
   'experience.card.responsive': () =>
     'Desarrollado interfaces flexibles que se adaptan a distintos tamaños de pantalla. Gran experiencia en diseño responsivo, para asegurar una buena experiencia para el usuario, sin importar el tamaño de su pantalla o dispositivo.',
+  'experience.card.courses': ({ coursesCount }) =>
+    `Constantemente mejorando mis habilidades, practicando en proyectos personales, resolviendo algoritmos, y tomando cursos para aprender cosas nuevas. Actualmente, he tomado más de ${coursesCount} cursos.`,
+  'experience.card.excellence': () =>
+    'Apuntando a la excelencia. Como regla incuestionable, siempre las mejores prácticas son aplicadas. Un código limpio y escalable está garantizado, con tests meticulosos para evitar código propenso a errores.',
+  'experience.card.agile': () =>
+    'Experimentado en trabajar con metodologías ágiles, mayormente scrum. Aplicación de fundamentos Agile para asegurar que el cliente tiene una clara noción de todo progreso, estar preparado para cambios en los requerimientos del producto, y para siempre priorizar el proveer valor para el usuario final.',
+  'experience.card.fullstack': () =>
+    'Conocimientos técnicos desde desarrollo frontend web y mobile hasta lógica de backend, diseño y creación de entidades, manejo de bases de datos y deploy en servidores productivos.',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',

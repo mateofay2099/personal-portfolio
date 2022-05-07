@@ -11,8 +11,12 @@ const Experience = () => {
     <section className="experience" data-cy="experienceSection" id="experience">
       <h2>{getMessage('experience.title')}</h2>
       <div className="experienceCardsDiv">
-        {CARDS.map(({ descriptionKey, icon, key }) => (
-          <ExperienceCard description={getMessage(descriptionKey)} icon={icon} key={key} />
+        {CARDS.map(({ descriptionKey, descriptionTextParams, Icon, key }) => (
+          <ExperienceCard
+            description={getMessage(descriptionKey, descriptionTextParams)}
+            Icon={Icon}
+            key={key}
+          />
         ))}
       </div>
     </section>

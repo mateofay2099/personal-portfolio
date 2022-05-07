@@ -18,14 +18,14 @@ describe('Experience Cards tests', () => {
 
   it('Should show correct data', () => {
     cy.visit('/');
-    CARDS.forEach(({ descriptionKey }, i) => {
+    CARDS.forEach(({ descriptionKey, descriptionTextParams }, i) => {
       cy.get(selectors.experienceSection)
         .find(selectors.experienceCard)
         .eq(i)
         .within(() => {
           cy.get(selectors.experienceCardImage).should('be.visible');
           cy.get(selectors.experienceCardDescription).contains(
-            getMessageByLanguage(LANGUAGES.ENG, descriptionKey)
+            getMessageByLanguage(LANGUAGES.ENG, descriptionKey, descriptionTextParams)
           );
         });
     });

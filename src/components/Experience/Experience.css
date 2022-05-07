@@ -52,11 +52,14 @@
   z-index: 2;
 }
 
-.experience .experienceCard img {
+.experience .experienceCard .experienceCardIconDiv {
   position: absolute;
   right: 10%;
-  width: 4.7rem;
   transform: translate(-100%, -65%);
+}
+
+.experience .experienceCard .experienceCardIcon {
+  width: 4.7rem;
 }
 
 .experience .experienceCard .descriptionDiv {
