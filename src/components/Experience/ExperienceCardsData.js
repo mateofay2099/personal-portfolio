@@ -1,35 +1,40 @@
-import internationalIconSvg from '@myIcons/cards/international.svg';
+import agileIcon from '@myIcons/cards/agile.svg';
+import coursesIcon from '@myIcons/cards/courses.svg';
+import excellenceIcon from '@myIcons/cards/excellence.svg';
+import fullstackIcon from '@myIcons/cards/fullstack.svg';
+import internationalIcon from '@myIcons/cards/international.svg';
+import responsiveIcon from '@myIcons/cards/responsive.svg';
 
 export const CARDS = [
   {
     descriptionKey: 'experience.card.responsive',
-    Icon: internationalIconSvg,
+    Icon: responsiveIcon,
     key: 'experienceCards_responsive',
   },
   {
     descriptionKey: 'experience.card.international',
-    Icon: internationalIconSvg,
+    Icon: internationalIcon,
     key: 'experienceCards_international',
   },
   {
     descriptionKey: 'experience.card.courses',
     descriptionTextParams: { coursesCount: 20 },
-    Icon: internationalIconSvg,
+    Icon: coursesIcon,
     key: 'experienceCards_courses',
   },
   {
-    descriptionKey: 'experience.card.excellency',
-    Icon: internationalIconSvg,
-    key: 'experienceCards_excellency',
+    descriptionKey: 'experience.card.excellence',
+    Icon: excellenceIcon,
+    key: 'experienceCards_excellence',
   },
   {
     descriptionKey: 'experience.card.agile',
-    Icon: internationalIconSvg,
+    Icon: agileIcon,
     key: 'experienceCards_agile',
   },
   {
     descriptionKey: 'experience.card.fullstack',
-    Icon: internationalIconSvg,
+    Icon: fullstackIcon,
     key: 'experienceCards_fullstack',
   },
 ];

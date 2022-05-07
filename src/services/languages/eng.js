@@ -33,7 +33,7 @@ export default {
     'Developed flexible interfaces that adapt to different screen sizes. Vast experience in responsive design, to ensure a good user experience no matter the size of the screen or device.',
   'experience.card.courses': ({ coursesCount } = {}) =>
     `Constantly improving my skills, practicing in personal projects, solving algorithms, and taking courses to learn new things. Currently made over ${coursesCount} courses.`,
-  'experience.card.excellency': () =>
+  'experience.card.excellence': () =>
     'Aiming for excellence. As an unquestionable rule, always best practices are applied. Clean and scalable code is guaranteed, with meticulous tests to avoid error prone code.',
   'experience.card.agile': () =>
     'Experienced working with Agile methodologies, mostly scrum. Application of agile fundamentals to ensure that the client gets clear notion of all progress, to be prepare for changes in product requirements, and to always prioritize providing value to the end user.',
