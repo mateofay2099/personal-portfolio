@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useLanguageContext } from '@providers/Language.provider';
 import { getAge, MY_BIRTH_DATE } from '@utils/getAge';
-import homeBackground from '@images/homeBackground.jpg';
 import meImg from '@images/me.jpeg';
 import ScrollIndicator from '@myIcons/scrollIndicator.svg';
 import NavBar from './NavBar';
@@ -12,12 +11,11 @@ import './Home.css';
 const Home = () => {
   const [showAboutMeModal, setShowAboutMeModal] = useState(false);
   const { currentTheme } = useThemeContext();
-  const backgroundImage = `linear-gradient(to bottom, transparent, ${currentTheme.customBlack}), url(${homeBackground})`;
   const age = getAge(MY_BIRTH_DATE);
   const { getMessage } = useLanguageContext();
 
   return (
-    <div className="homeWithNavbar" data-cy="homeWithNavbarSection" style={{ backgroundImage }}>
+    <div className="homeWithNavbar" data-cy="homeWithNavbarSection">
       <NavBar />
       <div className="fullHome">
         <section className="home">

@@ -8,8 +8,14 @@ html {
   box-sizing: border-box;
 }
 
+main {
+  position: relative;
+  background-color: var(--background);
+}
+
 main section {
   padding: 0 7vw 5vh 7vw;
+  background-color: transparent;
 }
 
 h1 {
@@ -50,7 +56,8 @@ p {
   font-family: var(--primary-font), sans-serif;
 }
 
-p, label {
+p,
+label {
   font-size: 1.6rem;
   line-height: 2.5rem;
 }
@@ -83,12 +90,34 @@ h2::after {
   margin-bottom: -0.9rem;
 }
 
-.fullScreenShadow {
-  position: absolute;
+.shadow {
   height: 100%;
   width: 100%;
-  background-color: var(--background);
-  opacity: 0.7;
+  background-color: var(--background) !important;
+  opacity: 0.5;
+}
+
+main .backgroundImage,
+main .backgroundImageGradient {
+  height: 95vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main .backgroundImage {
+  min-width: 100%;
+}
+
+main .backgroundImageGradient {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--background), transparent, var(--background));
+}
+
+@media (min-width: 768) {
+  main .backgroundImage {
+    width: 100%;
+  }
 }
 
 /* Change font sizes on smaller devices */
@@ -108,7 +137,8 @@ h2::after {
   h5 {
     font-size: 1.5rem;
   }
-  p, label {
+  p,
+  label {
     font-size: 1.3rem;
     line-height: 2rem;
   }
