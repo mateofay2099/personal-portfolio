@@ -5,17 +5,16 @@ const PortfolioCards = ({ description, onlySkeleton, repoLink, title }) => {
   if (onlySkeleton) {
     return (
       <>
-        <div className="fullScreenShadow" />
         <div className="comingSoonLabel" data-cy="comingSoonLabel">
           <h3>{title}</h3>
         </div>
-        <a className="portfolioCard" data-cy="portfolioCard">
+        <a className="portfolioCard shadow" data-cy="portfolioCard">
           <div className="portfolioCardSkeletonDiv">
             <div className="portfolioCardTitleSkeleton1" />
             <div className="portfolioCardTitleSkeleton2" />
           </div>
         </a>
-        <div className="portfolioCardDescription">
+        <div className="portfolioCardDescription shadow">
           <div className="portfolioCardSkeletonDiv">
             <div className="portfolioCardDescriptionSkeleton1" />
             <div className="portfolioCardDescriptionSkeleton2" />
