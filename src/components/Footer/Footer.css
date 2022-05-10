@@ -43,6 +43,7 @@ footer .contactOptions a .gmailLogo {
 footer .contactOptions a p {
   padding-left: 1rem;
   color: var(--customBlack);
+  position: relative;
 }
 
 footer .customizePageSection {
@@ -100,7 +101,6 @@ footer .closeModalButtonDiv {
   border: 0;
 }
 
-
 .customizeModal .customizeInputs .customizeInput .colorPickerDiv {
   position: absolute !important;
   bottom: 3.5rem;
@@ -138,5 +138,16 @@ footer .closeModalButtonDiv {
 
   footer .contact {
     order: 2;
+  }
+
+  footer .contactOptions a p:hover::after {
+    content: '';
+    height: 0.25rem;
+    width: 7rem;
+    background: linear-gradient(to right, var(--secondary), var(--primary));
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+    margin-bottom: -0.9rem;
   }
 }

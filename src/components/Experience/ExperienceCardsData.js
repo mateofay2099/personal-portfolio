@@ -9,32 +9,32 @@ export const CARDS = [
   {
     descriptionKey: 'experience.card.responsive',
     Icon: responsiveIcon,
-    key: 'experienceCards_responsive',
+    key: 'experienceCards-responsive',
   },
   {
     descriptionKey: 'experience.card.international',
     Icon: internationalIcon,
-    key: 'experienceCards_international',
+    key: 'experienceCards-international',
   },
   {
     descriptionKey: 'experience.card.courses',
     descriptionTextParams: { coursesCount: 20 },
     Icon: coursesIcon,
-    key: 'experienceCards_courses',
+    key: 'experienceCards-courses',
   },
   {
     descriptionKey: 'experience.card.excellence',
     Icon: excellenceIcon,
-    key: 'experienceCards_excellence',
+    key: 'experienceCards-excellence',
   },
   {
     descriptionKey: 'experience.card.agile',
     Icon: agileIcon,
-    key: 'experienceCards_agile',
+    key: 'experienceCards-agile',
   },
   {
     descriptionKey: 'experience.card.fullstack',
     Icon: fullstackIcon,
-    key: 'experienceCards_fullstack',
+    key: 'experienceCards-fullstack',
   },
 ];

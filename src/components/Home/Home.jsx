@@ -8,7 +8,7 @@ import NavBar from './NavBar';
 import AboutMeModal from './AboutMeModal';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ scrollToNextSection }) => {
   const [showAboutMeModal, setShowAboutMeModal] = useState(false);
   const { currentTheme } = useThemeContext();
   const age = getAge(MY_BIRTH_DATE);
@@ -47,7 +47,11 @@ const Home = () => {
             <div className="meImgBorderShadow" />
           </figure>
         </div>
-        <ScrollIndicator className="scrollIndicatorIcon" fill={currentTheme.secondary} />
+        <ScrollIndicator
+          className="scrollIndicatorIcon bounce"
+          fill={currentTheme.secondary}
+          onClick={scrollToNextSection}
+        />
       </div>
     </div>
   );
