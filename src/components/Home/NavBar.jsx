@@ -16,7 +16,7 @@ const NavBar = () => {
   const SPANISH_VALUE = 'spanish';
 
   const navBarButtonStyle = shouldOptionsAlwaysBeDisplayed ? { display: 'none' } : {};
-  const navBarOptionsStyle = showNavBarOptions ? 'active' : '';
+  const navBarOptionsStyle = !shouldOptionsAlwaysBeDisplayed && showNavBarOptions ? 'active' : '';
 
   const closeNavBarOptions = () => setShowNavBarOptions(false);
 
