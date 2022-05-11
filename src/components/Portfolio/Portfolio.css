@@ -11,6 +11,10 @@
   background-color: var(--secondary);
 }
 
+.portfolio .portfolioCardDivContainer {
+  width: 100%;
+}
+
 .portfolio .portfolioCardDiv {
   position: relative;
   height: 100%;
@@ -88,16 +92,22 @@
 }
 
 .comingSoonLabel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 36%;
-  padding: var(--custom-padding);
-  width: 200vw;
+  width: 120vw;
   background: linear-gradient(var(--blur), var(--blur));
   transform: rotate(22deg);
   z-index: 10;
+}
+
+.comingSoonLabel .comingSoonLabelShimmerDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--custom-padding);
+  animation-duration: 5s;
 }
 
 .comingSoonLabel h3 {

@@ -34,9 +34,9 @@ const testCards = (cardsToTest) => {
     cardsToTest.forEach(({ onlySkeleton, repoLink }, i) => {
       cy.get(selectors.portfolioCardDiv).eq(i).as('currentCard');
       if (onlySkeleton) {
-        cy.get('@currentCard').find(selectors.portfolioCard).should('not.have.attr', 'href');
+        cy.get('@currentCard').should('not.have.attr', 'href');
       } else {
-        cy.get('@currentCard').find(selectors.portfolioCard).should('have.attr', 'href', repoLink);
+        cy.get('@currentCard').should('have.attr', 'href', repoLink);
       }
     });
   });

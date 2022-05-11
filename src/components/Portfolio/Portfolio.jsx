@@ -19,27 +19,28 @@ const Portfolio = () => {
       {shouldShowSlider ? (
         <AwesomeSlider className="slider" organicArrows={false}>
           {CARDS.map(({ descriptionKey, key, onlySkeleton, repoLink, titleKey }) => (
-            <div className="portfolioCardDiv" data-cy="portfolioCardDiv" key={key}>
-              <PortfolioCard
-                description={getMessage(descriptionKey)}
-                onlySkeleton={onlySkeleton}
-                repoLink={repoLink}
-                title={getMessage(titleKey)}
-              />
+            <div className="portfolioCardDivContainer" key={key}>
+              <a className="portfolioCardDiv" data-cy="portfolioCardDiv" href={repoLink}>
+                <PortfolioCard
+                  description={getMessage(descriptionKey)}
+                  onlySkeleton={onlySkeleton}
+                  repoLink={repoLink}
+                  title={getMessage(titleKey)}
+                />
+              </a>
             </div>
           ))}
         </AwesomeSlider>
       ) : (
         <div className="portfolioCardsContainer" data-cy="desktopPortfolioCards">
           {CARDS.map(({ descriptionKey, key, onlySkeleton, repoLink, titleKey }) => (
-            <div className="portfolioCardDiv" data-cy="portfolioCardDiv" key={key}>
+            <a className="portfolioCardDiv" data-cy="portfolioCardDiv" href={repoLink} key={key}>
               <PortfolioCard
                 description={getMessage(descriptionKey)}
                 onlySkeleton={onlySkeleton}
-                repoLink={repoLink}
                 title={getMessage(titleKey)}
               />
-            </div>
+            </a>
           ))}
         </div>
       )}
