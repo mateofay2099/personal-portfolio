@@ -1,23 +1,25 @@
 import React from 'react';
 import './Portfolio.css';
 
-const PortfolioCards = ({ description, onlySkeleton, repoLink, title }) => {
+const PortfolioCards = ({ description, onlySkeleton, title }) => {
   if (onlySkeleton) {
     return (
       <>
         <div className="comingSoonLabel" data-cy="comingSoonLabel">
-          <h3>{title}</h3>
-        </div>
-        <a className="portfolioCard shadow" data-cy="portfolioCard">
-          <div className="portfolioCardSkeletonDiv">
-            <div className="portfolioCardTitleSkeleton1" />
-            <div className="portfolioCardTitleSkeleton2" />
+          <div className="comingSoonLabelShimmerDiv shimmer">
+            <h3>{title}</h3>
           </div>
-        </a>
+        </div>
+        <div className="portfolioCard shadow" data-cy="portfolioCard">
+          <div className="portfolioCardSkeletonDiv">
+            <div className="portfolioCardTitleSkeleton1 shimmer" />
+            <div className="portfolioCardTitleSkeleton2 shimmer" />
+          </div>
+        </div>
         <div className="portfolioCardDescription shadow">
           <div className="portfolioCardSkeletonDiv">
-            <div className="portfolioCardDescriptionSkeleton1" />
-            <div className="portfolioCardDescriptionSkeleton2" />
+            <div className="portfolioCardDescriptionSkeleton1 shimmer" />
+            <div className="portfolioCardDescriptionSkeleton2 shimmer" />
           </div>
         </div>
       </>
@@ -26,9 +28,9 @@ const PortfolioCards = ({ description, onlySkeleton, repoLink, title }) => {
 
   return (
     <>
-      <a className="portfolioCard" data-cy="portfolioCard" href={repoLink}>
+      <div className="portfolioCard" data-cy="portfolioCard">
         <h3>{title}</h3>
-      </a>
+      </div>
       <div className="portfolioCardDescription" data-cy="portfolioCard-description">
         <p>{description}</p>
       </div>
