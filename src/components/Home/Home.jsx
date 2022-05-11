@@ -49,6 +49,7 @@ const Home = ({ scrollToNextSection }) => {
         </div>
         <ScrollIndicator
           className="scrollIndicatorIcon bounce"
+          data-cy="scrollIndicator"
           fill={currentTheme.secondary}
           onClick={scrollToNextSection}
         />

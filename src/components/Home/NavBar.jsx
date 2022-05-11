@@ -40,7 +40,9 @@ const NavBar = () => {
   }, [shouldOptionsAlwaysBeDisplayed, width]);
 
   const renderNavBarOptions = () => (
-    <ul className={`navBarOptions ${navBarOptionsStyle}`} data-cy="navBarOptions">
+    <ul
+      className={`navBarOptions ${navBarOptionsStyle}`}
+      data-cy={`navBarOptions${navBarOptionsStyle}`}>
       <li>
         <a data-cy="navBar-experienceOption" href="#experience">
           {getMessage('experience.title')}

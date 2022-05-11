@@ -4,6 +4,7 @@ const selectors = {
   homeSection: '[data-cy=homeWithNavbarSection]',
   navBarButton: '[data-cy=navBarButton]',
   navBarOptions: '[data-cy=navBarOptions]',
+  activeNavBarOptions: '[data-cy=navBarOptionsactive]',
   experienceOption: '[data-cy=navBar-experienceOption]',
   portfolioOption: '[data-cy=navBar-portfolioOption]',
   languageSelector: '[data-cy=navBar-languageSelector]',
@@ -57,26 +58,26 @@ describe('NavBar tests --Mobile', () => {
     cy.get(selectors.navBarButton).as('optionsContainer');
   });
 
-  it('Should show a modal with proper navBar options and hide button', () => {
+  it('Should show a modal with proper navBar options', () => {
     cy.get('@optionsContainer').click();
-    cy.get(selectors.navBarOptions).should('be.visible');
-    cy.get(selectors.experienceOption).should('be.visible');
-    cy.get(selectors.portfolioOption).should('be.visible');
-    cy.get(selectors.languageSelector).should('be.visible');
-
-    cy.get('@optionsContainer').should('not.be.visible');
+    cy.get(selectors.activeNavBarOptions).within((navBarOptions) => {
+      cy.get(navBarOptions).find(selectors.experienceOption).should('be.visible');
+      cy.get(navBarOptions).find(selectors.portfolioOption).should('be.visible');
+      cy.get(navBarOptions).find(selectors.languageSelector).should('be.visible');
+    });
   });
 
   it('Should close options when clicking somewhere other than the selector', () => {
     cy.get('@optionsContainer').click();
-    cy.get(selectors.navBarOptions).should('be.visible');
+    cy.get(selectors.activeNavBarOptions).should('be.visible');
     cy.get(selectors.experienceOption).click();
     cy.location('hash').should('eq', '#experience');
-    cy.get(selectors.navBarOptions).should('not.exist');
+    cy.get(selectors.activeNavBarOptions).should('not.exist');
 
     cy.get('@optionsContainer').click();
+    cy.get(selectors.activeNavBarOptions).should('be.visible');
     cy.clickOutside();
-    cy.get(selectors.navBarOptions).should('not.exist');
+    cy.get(selectors.activeNavBarOptions).should('not.exist');
   });
 
   describe('NavBar options tests --Mobile', () => {
