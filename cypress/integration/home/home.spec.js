@@ -46,11 +46,6 @@ describe('Home tests', () => {
     cy.get(selectors.aboutMeModal).should('not.exist');
   });
 
-  it('Should scroll down when clicking on scroll indicator', () => {
-    cy.get(selectors.scrollIndicator).click();
-    expect(window.pageYOffset).to.be.greaterThan(100);
-  });
-
   it('Should NOT show new home image on smaller screen', () => {
     cy.viewport(767, 700);
     cy.get(selectors.homeMeImg).should('not.be.visible');
