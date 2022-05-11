@@ -17,22 +17,63 @@
 }
 
 .homeWithNavbar nav .navBarButton {
+  z-index: 3;
   margin-top: 3rem;
-  height: 4rem;
-  width: 4rem;
+}
+.homeWithNavbar nav .navBarButton > span {
+  display: block;
+  width: 3rem;
+  height: 0.3rem;
+  border-radius: var(--custom-border-radius);
+  background-color: var(--primary);
+  margin-bottom: 0.7rem;
+}
+
+.homeWithNavbar nav .navBarButton,
+.homeWithNavbar nav .navBarButton > span {
+  transition: all 0.4s ease-in-out;
+}
+
+.homeWithNavbar nav .navBarButton.active {
+  transition-delay: 0.8s;
+  transform: rotate(45deg);
+}
+
+.homeWithNavbar nav .navBarButton.active > span:nth-child(2) {
+  width: 0;
+}
+
+.homeWithNavbar nav .navBarButton.active > span:nth-child(1),
+.homeWithNavbar nav .navBarButton.active > span:nth-child(3) {
+  transition-delay: .4s;
+  width: 2rem;
+}
+
+.homeWithNavbar nav .navBarButton.active > span:nth-child(1) {
+  transform: translateY(1rem);
+}
+
+.homeWithNavbar nav .navBarButton.active > span:nth-child(3) {
+  transform: translateY(-1rem) rotate(90deg);
 }
 
 .homeWithNavbar nav .navBarOptions {
-  height: 18rem;
-  width: calc(100% - 14vw);
+  height: 20rem;
+  width: 100%;
   position: absolute;
-  top: 3rem;
+  top: -21rem;
+  left: 0;
   background-color: var(--background);
-  border: 0.1rem solid var(--primary);
+  border-bottom: 0.1rem solid var(--primary);
   display: flex;
   flex-direction: column;
   border-radius: var(--custom-border-radius);
-  padding: var(--custom-padding);
+  padding: 5rem 7vw 0;
+  transition: all 1s ease-in-out;
+}
+
+.homeWithNavbar nav .navBarOptions.active {
+  transform: translateY(100%);
 }
 
 .homeWithNavbar nav .navBarOptions li {
@@ -116,12 +157,14 @@
   }
 
   .homeWithNavbar nav .navBarOptions {
+    padding: var(--custom-padding);
     position: static;
     flex-direction: row;
     height: auto;
     width: auto;
     gap: 4rem;
     border: 0;
+    transition: none;
   }
 
   .homeWithNavbar nav .navBarOptions,

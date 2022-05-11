@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import NavBarButton from '@myIcons/navBarButton.svg';
-import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { useClickHandlerContext } from '@providers/ClickHandler.provider';
 import { useLanguageContext } from '@providers/Language.provider';
 import useWindowDimensions from '@hooks/useWindowDimensions';
@@ -8,7 +6,6 @@ import { LANGUAGES } from '@services/languages/languages';
 import './Home.css';
 
 const NavBar = () => {
-  const { currentTheme } = useThemeContext();
   const EXPANDED_NAVBAR_THRESHOLD = 768;
   const { width } = useWindowDimensions();
   const shouldOptionsAlwaysBeDisplayed = width >= EXPANDED_NAVBAR_THRESHOLD;
@@ -18,18 +15,15 @@ const NavBar = () => {
   const ENGLISH_VALUE = 'english';
   const SPANISH_VALUE = 'spanish';
 
-  const navBarButtonStyle = shouldOptionsAlwaysBeDisplayed
-    ? { display: 'none' }
-    : showNavBarOptions
-    ? { visibility: 'hidden' }
-    : {};
+  const navBarButtonStyle = shouldOptionsAlwaysBeDisplayed ? { display: 'none' } : {};
+  const navBarOptionsStyle = !shouldOptionsAlwaysBeDisplayed && showNavBarOptions ? 'active' : '';
 
-  const onClickOutsideNavBarOptions = () => setShowNavBarOptions(false);
+  const closeNavBarOptions = () => setShowNavBarOptions(false);
 
   const handleNavBarButtonClick = (e) => {
     e.stopPropagation();
     setShowNavBarOptions(true);
-    addFunctionToExecute(onClickOutsideNavBarOptions);
+    addFunctionToExecute(closeNavBarOptions);
   };
 
   const onLanguageSelected = (e) => {
@@ -46,7 +40,9 @@ const NavBar = () => {
   }, [shouldOptionsAlwaysBeDisplayed, width]);
 
   const renderNavBarOptions = () => (
-    <ul className="navBarOptions" data-cy="navBarOptions">
+    <ul
+      className={`navBarOptions ${navBarOptionsStyle}`}
+      data-cy={`navBarOptions${navBarOptionsStyle}`}>
       <li>
         <a data-cy="navBar-experienceOption" href="#experience">
           {getMessage('experience.title')}
@@ -80,14 +76,16 @@ const NavBar = () => {
 
   return (
     <nav>
-      <NavBarButton
-        className="navBarButton"
+      <div
+        className={`navBarButton ${navBarOptionsStyle}`}
         data-cy="navBarButton"
-        onClick={handleNavBarButtonClick}
-        stroke={currentTheme.primary}
-        style={navBarButtonStyle}
-      />
-      {showNavBarOptions && renderNavBarOptions()}
+        onClick={showNavBarOptions ? closeNavBarOptions : handleNavBarButtonClick}
+        style={navBarButtonStyle}>
+        <span />
+        <span />
+        <span />
+      </div>
+      {renderNavBarOptions()}
     </nav>
   );
 };
