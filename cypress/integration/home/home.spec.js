@@ -8,7 +8,6 @@ const selectors = {
   aboutMeModal: '[data-cy=aboutMeModal]',
   aboutMeModalCloseButton: '[data-cy=aboutMeModal-closeButton]',
   homeMeImg: '[data-cy=homeMeImg]',
-  scrollIndicator: '[data-cy=scrollIndicator]',
 };
 
 describe('Home tests', () => {
