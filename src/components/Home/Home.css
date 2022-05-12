@@ -126,12 +126,12 @@
   color: var(--customBlack);
 }
 
-.aboutMeModal h2 {
+.aboutMeModal h3 {
   font-size: 2.3rem;
   margin-bottom: 5vh;
 }
 
-.aboutMeModal h2::after {
+.aboutMeModal h3::after {
   width: 5rem;
 }
 
@@ -224,6 +224,7 @@
   .meImgContainer figure img {
     border-radius: 50%;
     width: 100%;
+    height: auto;
   }
 
   .meImgContainer .meImgBorderShadow {

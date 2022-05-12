@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="contactOptions">
           {contactOptions.map(({ className, displayName, href, logo }) => (
             <a data-cy={`contactOption-${className}`} href={href} key={className}>
-              <img className={className} src={logo} />
+              <img alt={className} className={className} src={logo} />
               <p>{displayName}</p>
             </a>
           ))}

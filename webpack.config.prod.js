@@ -6,6 +6,7 @@ const baseConfig = require('./webpack.config.base');
 
 const prodConfig = {
   mode: 'production',
+  devtool: false,
   plugins: [new CleanWebpackPlugin()],
   optimization: {
     minimize: true,

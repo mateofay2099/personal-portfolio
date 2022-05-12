@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name]_[chunkhash].bundle.js',
+    chunkFilename: '[id].[chunkhash].js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],

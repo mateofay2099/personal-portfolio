@@ -10,7 +10,7 @@ const Experience = forwardRef((_, ref) => {
 
   return (
     <section className="experience" data-cy="experienceSection" id="experience" ref={ref}>
-      <h2>{getMessage('experience.title')}</h2>
+      <h3>{getMessage('experience.title')}</h3>
       <div className="experienceCardsDiv">
         {CARDS.map(({ descriptionKey, descriptionTextParams, Icon, key }) => (
           <ExperienceCard

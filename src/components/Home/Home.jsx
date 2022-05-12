@@ -22,7 +22,7 @@ const Home = ({ scrollToNextSection }) => {
           <div className="homeTitleDiv">
             <h1>{getMessage('home.name.introduction')}</h1>
             <h1>Mateo Fay</h1>
-            <h4>{getMessage('home.profession')}</h4>
+            <h2>{getMessage('home.profession')}</h2>
           </div>
           <div className="homeIntroductionDiv">
             <p data-cy="homeIntroduction1">
@@ -43,7 +43,7 @@ const Home = ({ scrollToNextSection }) => {
         </section>
         <div className="meImgContainer">
           <figure>
-            <img data-cy="homeMeImg" src={meImg} />
+            <img alt="Image about me" data-cy="homeMeImg" src={meImg} />
             <div className="meImgBorderShadow" />
           </figure>
         </div>
