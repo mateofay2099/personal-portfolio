@@ -174,21 +174,24 @@
   }
 
   .homeWithNavbar nav .navBarOptions li {
+    position: relative;
     flex: 0;
   }
 
   .homeWithNavbar nav .navBarOptions li a,
   #languageSelector {
-    position: relative;
     width: auto;
     font-size: 1.8rem;
   }
 
-  .homeWithNavbar nav .navBarOptions li a::after,
-  #languageSelector::after {
+  #languageSelector:hover {
+    cursor: pointer;
+  }
+
+  .homeWithNavbar nav .navBarOptions li::after {
     content: '';
     height: 0.25rem;
-    background: linear-gradient(to right, var(--secondary), var(--primary));
+    background: var(--secondary);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -197,8 +200,7 @@
     width: 0;
   }
 
-  .homeWithNavbar nav .navBarOptions li a:hover::after,
-  #languageSelector:hover::after {
+  .homeWithNavbar nav .navBarOptions li:hover::after {
     width: 100%;
   }
 
