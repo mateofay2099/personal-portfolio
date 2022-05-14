@@ -144,15 +144,12 @@
 }
 
 .scrollIndicatorIcon {
+  cursor: pointer;
   position: absolute;
   bottom: 5%;
   left: 50%;
   margin-left: -3rem;
   width: 6rem;
-}
-
-.scrollIndicatorIcon {
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
