@@ -43,7 +43,7 @@ const Home = ({ scrollToNextSection }) => {
         </section>
         <div className="meImgContainer">
           <figure>
-            <img alt="Image about me" data-cy="homeMeImg" src={meImg} />
+            <img alt="Image about me" data-cy="homeMeImg" src={meImg} height={550} width={550} />
             <div className="meImgBorderShadow" />
           </figure>
         </div>

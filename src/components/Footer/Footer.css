@@ -33,11 +33,13 @@ footer .contactOptions a {
 }
 
 footer .contactOptions a img {
+  height: 2.5rem;
   width: 2.5rem;
 }
 footer .contactOptions a .gmailLogo {
   margin-left: 0.2rem;
   width: 2rem;
+  height: 2rem;
 }
 
 footer .contactOptions a p {

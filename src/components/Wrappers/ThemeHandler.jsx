@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import WebFont from 'webfontloader';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import {
   BUTTON_PADDING,
@@ -26,11 +25,6 @@ const ThemeHandler = ({ children }) => {
   }, [currentTheme]);
 
   useEffect(() => {
-    WebFont.load({
-      google: {
-        families: [PRIMARY_FONT],
-      },
-    });
     document.documentElement.style.setProperty('--primary-font', PRIMARY_FONT);
     document.documentElement.style.setProperty('--custom-border-radius', CUSTOM_BORDER_RADIUS);
     document.documentElement.style.setProperty('--custom-box-shadow', CUSTOM_BOX_SHADOW);
