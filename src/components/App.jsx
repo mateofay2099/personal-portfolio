@@ -21,8 +21,10 @@ const App = () => {
       <ThemeProvider>
         <ThemeHandler>
           <ClickHandlerProvider>
-            <img className="backgroundImage" src={backgroundImage} />
-            <div className="backgroundImageGradient" />
+            <div className="backgroundImageDiv">
+              <div className="backgroundImageGradient" />
+              <img alt="Background Image" className="backgroundImage" src={backgroundImage} />
+            </div>
             <Home scrollToNextSection={scrollToNextSection} />
             <Experience ref={experienceRef} />
             <Portfolio />

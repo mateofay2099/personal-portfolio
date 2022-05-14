@@ -12,11 +12,11 @@ const AboutMeModal = ({ isOpen, onCloseButtonClick }) => {
       isOpen={isOpen}
       onRequestClose={onCloseButtonClick}
       showCloseButton>
-      <h2>{getMessage('home.aboutMeModal.location.title')}</h2>
+      <h3>{getMessage('home.aboutMeModal.location.title')}</h3>
       <p>{getMessage('home.aboutMeModal.location.description')}</p>
-      <h2>{getMessage('home.aboutMeModal.hobbies.title')}</h2>
+      <h3>{getMessage('home.aboutMeModal.hobbies.title')}</h3>
       <p>{getMessage('home.aboutMeModal.hobbies.description')}</p>
-      <h2>{getMessage('home.aboutMeModal.longTermPlan.title')}</h2>
+      <h3>{getMessage('home.aboutMeModal.longTermPlan.title')}</h3>
       <p>{getMessage('home.aboutMeModal.longTermPlan.description')}</p>
     </CustomModal>
   );

@@ -45,7 +45,7 @@
 
 .homeWithNavbar nav .navBarButton.active > span:nth-child(1),
 .homeWithNavbar nav .navBarButton.active > span:nth-child(3) {
-  transition-delay: .4s;
+  transition-delay: 0.4s;
   width: 2rem;
 }
 
@@ -126,12 +126,12 @@
   color: var(--customBlack);
 }
 
-.aboutMeModal h2 {
+.aboutMeModal h3 {
   font-size: 2.3rem;
   margin-bottom: 5vh;
 }
 
-.aboutMeModal h2::after {
+.aboutMeModal h3::after {
   width: 5rem;
 }
 
@@ -174,6 +174,7 @@
   }
 
   .homeWithNavbar nav .navBarOptions li {
+    position: relative;
     flex: 0;
   }
 
@@ -181,11 +182,26 @@
   #languageSelector {
     width: auto;
     font-size: 1.8rem;
-    box-shadow: 0 0.3rem 0.3rem -0.3rem var(--secondary);
   }
-  .homeWithNavbar nav .navBarOptions li a:hover,
+
   #languageSelector:hover {
-    box-shadow: 0 0.3rem 0.1rem -0.1rem var(--secondary);
+    cursor: pointer;
+  }
+
+  .homeWithNavbar nav .navBarOptions li::after {
+    content: '';
+    height: 0.25rem;
+    background: var(--secondary);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -0.7rem;
+    transition: all 0.4s ease-in-out;
+    width: 0;
+  }
+
+  .homeWithNavbar nav .navBarOptions li:hover::after {
+    width: 100%;
   }
 
   .meImgContainer {
@@ -210,6 +226,7 @@
   .meImgContainer figure img {
     border-radius: 50%;
     width: 100%;
+    height: auto;
   }
 
   .meImgContainer .meImgBorderShadow {

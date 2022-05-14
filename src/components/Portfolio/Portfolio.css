@@ -47,13 +47,15 @@
 
 .portfolio .portfolioCardDiv .portfolioCardDescription {
   width: 100%;
-  margin: 9rem 0;
+  margin: 8rem 0;
   background-color: transparent;
   height: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: var(--custom-border-radius);
+  padding-bottom: 1rem;
 }
 
 .portfolio .portfolioCardDiv .portfolioCardSkeletonDiv {
@@ -107,10 +109,15 @@
   align-items: center;
   justify-content: center;
   padding: var(--custom-padding);
-  animation-duration: 5s;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%, transparent 40%,
+    var(--blur) 50%, var(--blur) 60%,
+    transparent 65%, transparent 100%
+  );
 }
 
-.comingSoonLabel h3 {
+.comingSoonLabel h4 {
   background: transparent;
   color: var(--primary);
   font-size: 3.3rem;

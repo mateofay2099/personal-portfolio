@@ -7,7 +7,7 @@ const PortfolioCards = ({ description, onlySkeleton, title }) => {
       <>
         <div className="comingSoonLabel" data-cy="comingSoonLabel">
           <div className="comingSoonLabelShimmerDiv shimmer">
-            <h3>{title}</h3>
+            <h4>{title}</h4>
           </div>
         </div>
         <div className="portfolioCard shadow" data-cy="portfolioCard">
@@ -29,7 +29,7 @@ const PortfolioCards = ({ description, onlySkeleton, title }) => {
   return (
     <>
       <div className="portfolioCard" data-cy="portfolioCard">
-        <h3>{title}</h3>
+        <h4>{title}</h4>
       </div>
       <div className="portfolioCardDescription" data-cy="portfolioCard-description">
         <p>{description}</p>

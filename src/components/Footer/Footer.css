@@ -140,14 +140,19 @@ footer .closeModalButtonDiv {
     order: 2;
   }
 
-  footer .contactOptions a p:hover::after {
+  footer .contactOptions a p::after {
     content: '';
     height: 0.25rem;
-    width: 7rem;
     background: linear-gradient(to right, var(--secondary), var(--primary));
     position: absolute;
     left: 1rem;
     bottom: 0;
     margin-bottom: -0.9rem;
+    transition: all 0.4s ease-in-out;
+    width: 0;
+  }
+
+  footer .contactOptions a p:hover::after {
+    width: 7rem;
   }
 }
