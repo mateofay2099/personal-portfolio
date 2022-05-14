@@ -151,6 +151,10 @@
   width: 6rem;
 }
 
+.scrollIndicatorIcon {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .home {
     flex: 0.5;

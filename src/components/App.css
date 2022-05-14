@@ -68,6 +68,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 select,
 option {
   background: var(--customBlack);
