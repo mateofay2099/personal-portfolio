@@ -1,0 +1,19 @@
+.technologiesModal h3 {
+  font-size: 2.3rem;
+  margin-bottom: 5vh;
+}
+
+.technologiesModal h3::after {
+  width: 5rem;
+}
+
+.technologiesList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.technologiesList .customListItem {
+  width: 20rem;
+  margin-bottom: 1rem;
+}

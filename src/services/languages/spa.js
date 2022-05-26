@@ -1,6 +1,7 @@
 export default {
   // Common
   comingSoon: () => 'Próximamente',
+  'technologies.title': () => 'Tecnologías',
 
   // Home
   'home.name.introduction': () => 'Hola, soy',
@@ -33,12 +34,14 @@ export default {
     'Vasta experiencia en diseño responsivo. He desarrollado interfaces flexibles que se adaptan a distintos tamaños de pantalla para asegurar una buena experiencia para el usuario, sin importar su dispositivo.',
   'experience.card.courses': ({ coursesCount }) =>
     `Estoy constantemente mejorando mis habilidades, practicando en proyectos personales, resolviendo algoritmos, y tomando cursos para aprender cosas nuevas. Actualmente, he tomado más de ${coursesCount} cursos.`,
+  'experience.openCourses': () => 'Ver cursos y certificaciones',
   'experience.card.excellence': () =>
     'Siempre apunto a la excelencia. Como regla incuestionable, siempre aplico las mejores prácticas para garantizar un código limpio y escalable, con tests meticulosos para evitar código propenso a errores.',
   'experience.card.agile': () =>
     'Gran experiencia trabajando con metodologías ágiles, mayormente scrum. Gracias a la aplicación de fundamentos Agile, puedo asegurar que el cliente tiene una clara noción de todo progreso, estar preparado para cambios en los requerimientos del producto, y siempre priorizar proveer valor para el usuario final.',
   'experience.card.fullstack': () =>
     'Tengo conocimientos técnicos desde desarrollo frontend web y mobile hasta lógica de backend, diseño y creación de entidades, manejo de bases de datos y deploy en servidores productivos.',
+  'experience.openTechnologies': () => 'Ver lista de tecnologías',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',

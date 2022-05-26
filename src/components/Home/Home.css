@@ -79,7 +79,6 @@
 .homeWithNavbar nav .navBarOptions li {
   flex: 1;
   width: 100%;
-  list-style-type: none;
 }
 
 .homeWithNavbar nav .navBarOptions li a,
@@ -135,8 +134,8 @@
   width: 5rem;
 }
 
-.aboutMeModal p {
-  margin-top: 5rem;
+.aboutMeModal > p {
+  margin-top: 2rem;
 }
 
 .meImgContainer {

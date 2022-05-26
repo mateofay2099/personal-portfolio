@@ -9,6 +9,7 @@ const CustomModal = ({
   children,
   closeButtonStyle = {},
   customClass = 'modal',
+  fullscreen = false,
   isOpen,
   onRequestClose,
   showCloseButton = false,
@@ -22,6 +23,7 @@ const CustomModal = ({
     content: {
       width: 'calc(100% - 3.3rem)',
       maxHeight: 'calc(90vh - 2.8rem)',
+      height: fullscreen ? 'calc(90vh - 2.8rem)' : 'auto',
       top: '50%',
       left: '50%',
       right: 'auto',
@@ -35,6 +37,7 @@ const CustomModal = ({
       position: 'relative',
       padding: CUSTOM_PADDING,
       overflowY: 'auto',
+      overflowX: 'hidden',
       zIndex: 10,
       ...customStyle,
     },

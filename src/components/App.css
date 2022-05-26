@@ -68,6 +68,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -94,6 +98,16 @@ h3::after {
   left: 0;
   bottom: 0;
   margin-bottom: -0.9rem;
+}
+
+.clickableText {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.clickableText:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .shadow {
