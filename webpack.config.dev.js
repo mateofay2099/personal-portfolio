@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.config.base');
 
 const devConfig = {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),

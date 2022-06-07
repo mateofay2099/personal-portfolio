@@ -42,7 +42,7 @@ const Technologies = () => {
         isOpen={showModal}
         onRequestClose={closeModal}
         showCloseButton>
-        <h3>Technologies</h3>
+        <h3>{getMessage('technologies.title')}</h3>
         <ul className="technologiesList" style={{ height: listHeight }}>
           {TECHNOLOGIES.map(({ description, subItems }) => (
             <CustomListItem description={description} key={description} subItems={subItems} />

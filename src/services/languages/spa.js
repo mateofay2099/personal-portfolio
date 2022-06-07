@@ -1,6 +1,7 @@
 export default {
   // Common
   comingSoon: () => 'Próximamente',
+  'courses.title': () => 'Cursos y certificaciones',
   'technologies.title': () => 'Tecnologías',
 
   // Home
@@ -42,6 +43,41 @@ export default {
   'experience.card.fullstack': () =>
     'Tengo conocimientos técnicos desde desarrollo frontend web y mobile hasta lógica de backend, diseño y creación de entidades, manejo de bases de datos y deploy en servidores productivos.',
   'experience.openTechnologies': () => 'Ver lista de tecnologías',
+
+  // Courses
+  'courses.aws.cloudPractitioner': () => 'AWS Certified Cloud Practitioner',
+
+  'courses.platzi.fundamentals': () => 'Fundamentos de Ingeniería de Software',
+  'courses.platzi.git': () => 'Curso profesional de Git y Github',
+  'courses.platzi.cmd': () => 'Introducción a la terminal y línea de comandos',
+  'courses.platzi.htmlcss.definitive': () => 'Curso definitivo de HTML y CSS',
+  'courses.platzi.htmlcss.practical': () => 'Curso práctico de HTML y CSS',
+  'courses.platzi.responsive': () => 'Responsive design: Maquetación Mobile First',
+  'courses.platzi.frontend': () => 'Frontend Developer',
+  'courses.platzi.frontend.practical': () => 'Curso práctico de Frontend Developer',
+  'courses.platzi.design': () => 'Diseño para Developers',
+  'courses.platzi.grid': () => 'CSS Grid',
+  'courses.platzi.js.practical': () => 'Curso práctico de Javascript',
+  'courses.platzi.js.async': () => 'Asincronismo con Javascript',
+  'courses.platzi.js.es6': () => 'ECMAScript 6+',
+  'courses.platzi.js.professional': () => 'Curso Profesional de Javascript',
+  'courses.platzi.npm': () => 'Gestión de Dependencias y Paquetes con NPM',
+  'courses.platzi.node': () => 'Fundamentos de Node.js',
+  'courses.platzi.webpack': () => 'Webpack',
+  'courses.platzi.react.practical': () => 'Curso práctico de React.js',
+  'courses.platzi.next.practical': () => 'Curso práctico de Next.js',
+  'courses.platzi.next.professional': () => 'Curso profesional de Next.js',
+  'courses.pluralsight.reactRoleIQ': () => 'RoleIQ nivel Experto - Desarollador Web React',
+  'courses.pluralsight.reactNative': () =>
+    'Path - Construyendo aplicaciones móviles con React Native',
+  'courses.pluralsight.buildingWebApps': () => 'Construyendo aplicaciones web con React',
+  'courses.pluralsight.buildingWebApps.js': () => 'JavaScript',
+  'courses.pluralsight.buildingWebApps.html': () => 'HTML5',
+  'courses.pluralsight.buildingWebApps.css': () => 'CSS',
+  'courses.pluralsight.buildingWebApps.redux': () => 'Redux',
+  'courses.pluralsight.buildingWebApps.git': () => 'Administrando el código fuente con Git',
+  'courses.pluralsight.buildingWebApps.npm': () => 'NPM',
+  'courses.pluralsight.buildingWebApps.es6': () => 'ES6',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',

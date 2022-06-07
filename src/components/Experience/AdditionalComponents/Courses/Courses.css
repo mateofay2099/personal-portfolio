@@ -1,0 +1,44 @@
+.coursesModal h3 {
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+}
+
+.coursesModal h3::after {
+  width: 8rem;
+}
+
+.coursesModal .coursesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+}
+
+.coursesModal h4 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  width: max-content;
+  position: relative;
+}
+
+.coursesModal h4::after {
+  background: linear-gradient(to right, var(--primary), var(--background)) !important;
+  width: 60% !important;
+}
+
+.coursesModal .coursesContainer h4:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.coursesModal .customListItem {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 930px) {
+  .coursesModal .coursesContainer {
+    height: 63rem;
+  }
+  .coursesModal .customListItem {
+    width: 43rem;
+  }
+}

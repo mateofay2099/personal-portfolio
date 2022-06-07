@@ -1,6 +1,7 @@
 export default {
   // Common
   comingSoon: () => 'Coming Soon',
+  'courses.title': () => 'Courses and certifications',
   'technologies.title': () => 'Technologies',
 
   // Home
@@ -42,6 +43,40 @@ export default {
   'experience.card.fullstack': () =>
     'I have technical knowledge from web and mobile frontend design to backend logic, entities design and creation, database handling, data security and deployment on productive servers.',
   'experience.openTechnologies': () => 'See list of technologies',
+
+  // Courses
+  'courses.aws.cloudPractitioner': () => 'AWS Certified Cloud Practitioner',
+
+  'courses.platzi.fundamentals': () => 'Software engineering fundamentals',
+  'courses.platzi.git': () => 'Git and Github professional course',
+  'courses.platzi.cmd': () => 'Introduction to the terminal and command line',
+  'courses.platzi.htmlcss.definitive': () => 'Definitive HTML and CSS',
+  'courses.platzi.htmlcss.practical': () => 'HTML & CSS: Practical Course',
+  'courses.platzi.responsive': () => 'Responsive design course: Mobile First Layout',
+  'courses.platzi.frontend': () => 'Frontend Developer',
+  'courses.platzi.frontend.practical': () => 'Frontend Developer: Practical Course',
+  'courses.platzi.design': () => 'Design for Developers',
+  'courses.platzi.grid': () => 'CSS Grid',
+  'courses.platzi.js.practical': () => 'Javascript: Practical Course',
+  'courses.platzi.js.async': () => 'Async with Javascript',
+  'courses.platzi.js.es6': () => 'ECMAScript 6+',
+  'courses.platzi.js.professional': () => 'Professional Javascript',
+  'courses.platzi.npm': () => 'Management of packages and dependencies with NPM',
+  'courses.platzi.node': () => 'Node.js Fundamentals',
+  'courses.platzi.webpack': () => 'Webpack',
+  'courses.platzi.react.practical': () => 'React.js Practical Course',
+  'courses.platzi.next.practical': () => 'Next.js Practical Course',
+  'courses.platzi.next.professional': () => 'Professional Next.js',
+  'courses.pluralsight.reactRoleIQ': () => 'Expert level RoleIQ - React Web Developer',
+  'courses.pluralsight.reactNative': () => 'Path - Build Mobile Applications With React Native',
+  'courses.pluralsight.buildingWebApps': () => 'Building Web Applications With React',
+  'courses.pluralsight.buildingWebApps.js': () => 'JavaScript Core Language',
+  'courses.pluralsight.buildingWebApps.html': () => 'HTML5',
+  'courses.pluralsight.buildingWebApps.css': () => 'CSS',
+  'courses.pluralsight.buildingWebApps.redux': () => 'Redux',
+  'courses.pluralsight.buildingWebApps.git': () => 'Managing Source Code With Git',
+  'courses.pluralsight.buildingWebApps.npm': () => 'NPM',
+  'courses.pluralsight.buildingWebApps.es6': () => 'ES6',
 
   // Portfolio
   'portfolio.title': () => 'Portfolio',
