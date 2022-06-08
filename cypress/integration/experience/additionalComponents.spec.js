@@ -11,6 +11,7 @@ const selectors = {
   coursesModal: '[data-cy=coursesModal]',
   coursesModalTitle: '[data-cy=coursesModal-title]',
   coursesModalSubtitles: (key) => `[data-cy=${key}-title]`,
+  coursesModalSubtitlesLogos: (key) => `[data-cy=${key}-logo]`,
   coursesModalCloseButton: '[data-cy=coursesModal-closeButton]',
   technologiesModal: '[data-cy=technologiesModal]',
   technologiesModalTitle: '[data-cy=technologiesModal-title]',
@@ -55,7 +56,12 @@ describe('Experience Cards - Additional Components tests', () => {
       cy.get(selectors.coursesAdditionalComponent).click();
       cy.get(selectors.coursesModal).should('be.visible');
       cy.get(selectors.coursesModalTitle).should('be.visible');
-      GROUPED_COURSES.forEach(({ title, key, courses }) => {
+      GROUPED_COURSES.forEach(({ title, key, logo, courses }) => {
+        if (logo) {
+          cy.get(selectors.coursesModal)
+            .find(selectors.coursesModalSubtitlesLogos(key))
+            .should('be.visible');
+        }
         if (title) {
           cy.get(selectors.coursesModal).find(selectors.coursesModalSubtitles(key)).contains(title);
         }

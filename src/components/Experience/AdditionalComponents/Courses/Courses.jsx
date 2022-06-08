@@ -32,7 +32,7 @@ const Courses = ({ cardKey }) => {
             <React.Fragment key={key}>
               {title && (
                 <div className="platformTitleContainer">
-                  {logo && <img alt={`${title} Logo`} src={logo} />}
+                  {logo && <img alt={`${title} Logo`} data-cy={`${key}-logo`} src={logo} />}
                   <h4 data-cy={`${key}-title`}>{title}</h4>
                 </div>
               )}
