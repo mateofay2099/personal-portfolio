@@ -14,6 +14,17 @@
   padding: 0.5rem 1rem;
 }
 
+.coursesModal .coursesContainer .platformTitleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.coursesModal .coursesContainer .platformTitleContainer img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
 .coursesModal h4 {
   font-size: 1.8rem;
   margin-bottom: 2rem;

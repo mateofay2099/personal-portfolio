@@ -1,6 +1,11 @@
+import platziLogo from '@images/platforms/platzi.png';
+import awsLogo from '@images/platforms/aws.png';
+import pluralsightLogo from '@images/platforms/pluralsight.png';
+
 const GROUPED_COURSES = [
   {
     title: 'Platzi',
+    logo: platziLogo,
     key: 'platform-platzi',
     courses: [
       { courseKey: 'courses.platzi.fundamentals' },
@@ -27,11 +32,13 @@ const GROUPED_COURSES = [
   },
   {
     title: 'Amazon Web Services',
+    logo: awsLogo,
     key: 'platform-aws',
     courses: [{ courseKey: 'courses.aws.cloudPractitioner' }],
   },
   {
     title: 'Pluralsight',
+    logo: pluralsightLogo,
     key: 'platform-pluralsight',
     courses: [
       { courseKey: 'courses.pluralsight.reactRoleIQ' },

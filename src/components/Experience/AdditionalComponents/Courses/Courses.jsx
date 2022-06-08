@@ -28,9 +28,14 @@ const Courses = ({ cardKey }) => {
         showCloseButton>
         <h3 data-cy="coursesModal-title">{getMessage('courses.title')}</h3>
         <div className="coursesContainer">
-          {GROUPED_COURSES.map(({ courses, key, title }) => (
+          {GROUPED_COURSES.map(({ courses, key, logo, title }) => (
             <React.Fragment key={key}>
-              {title && <h4 data-cy={`${key}-title`}>{title}</h4>}
+              {title && (
+                <div className="platformTitleContainer">
+                  {logo && <img alt={`${title} Logo`} src={logo} />}
+                  <h4 data-cy={`${key}-title`}>{title}</h4>
+                </div>
+              )}
               {courses.map(({ courseKey, subItems }) => (
                 <CustomListItem
                   description={getMessage(courseKey)}
