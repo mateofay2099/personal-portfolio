@@ -70,6 +70,10 @@ footer .customizePageSection button {
   margin: 0 auto;
 }
 
+footer .customizePageSection button:hover {
+  background: linear-gradient(to left, var(--secondary), var(--primary));
+}
+
 footer .closeModalButtonDiv {
   position: absolute;
   top: 2rem;
