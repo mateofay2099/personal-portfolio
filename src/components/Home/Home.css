@@ -121,6 +121,10 @@
   background-color: var(--primary);
 }
 
+.home .aboutMeButton:hover {
+  background-color: var(--blurredPrimary);
+}
+
 .home .aboutMeButton p {
   color: var(--customBlack);
 }

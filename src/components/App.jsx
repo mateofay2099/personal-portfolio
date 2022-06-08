@@ -8,6 +8,7 @@ import { ThemeProvider } from '@providers/Theming.provider.jsx';
 import { ClickHandlerProvider } from '@providers/ClickHandler.provider';
 import { LanguageProvider } from '@providers/Language.provider';
 import backgroundImage from '@images/backgroundImage.jpg';
+import comet from '@images/comet.png';
 import './App.css';
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
             <div className="backgroundImageDiv">
               <div className="backgroundImageGradient" />
               <img alt="Background Image" className="backgroundImage" src={backgroundImage} />
+              <img alt="Comet" className="comet1" src={comet} />
+              <img alt="Comet" className="comet2" src={comet} />
             </div>
             <Home scrollToNextSection={scrollToNextSection} />
             <Experience ref={experienceRef} />

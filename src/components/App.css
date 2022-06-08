@@ -145,6 +145,35 @@ main .backgroundImageGradient {
   z-index: 2;
 }
 
+.comet1, .comet2 {
+  position: absolute;
+  width: 15rem;
+}
+.comet1 {
+  top: 14%;
+  left: -15rem;
+  animation: comet-move-1 20s 10s forwards infinite;
+}
+.comet2 {
+  bottom: -5rem;
+  left: 10%;
+  animation: comet-move-2 35s 0s forwards infinite;
+}
+
+@keyframes comet-move-1 {
+  to {
+    transform: translate(50rem, -10rem);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes comet-move-2 {
+  to {
+    transform: translate(140rem, -30rem);
+    filter: hue-rotate(360deg);
+  }
+}
+
 .bounce {
   animation-duration: 2s;
   animation-iteration-count: infinite;
