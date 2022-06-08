@@ -2,7 +2,7 @@ import React from 'react';
 import { useThemeContext } from '@providers/Theming.provider.jsx';
 import { ScrollRotate } from 'react-scroll-rotate';
 
-const ExperienceCard = ({ customClass, description, Icon }) => {
+const ExperienceCard = ({ AdditionalComponent, customClass, description, Icon }) => {
   const { currentTheme } = useThemeContext();
 
   return (
@@ -16,8 +16,11 @@ const ExperienceCard = ({ customClass, description, Icon }) => {
           />
         </ScrollRotate>
       </div>
-      <div className="descriptionDiv">
-        <p data-cy="experienceCard-description">{description}</p>
+      <div className="cardContent" data-cy={`${customClass}-content`}>
+        <div className="descriptionDiv">
+          <p data-cy="experienceCard-description">{description}</p>
+        </div>
+        {AdditionalComponent && <AdditionalComponent cardKey={customClass} />}
       </div>
     </div>
   );

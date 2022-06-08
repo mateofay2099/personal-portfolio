@@ -12,8 +12,9 @@ const Experience = forwardRef((_, ref) => {
     <section className="experience" data-cy="experienceSection" id="experience" ref={ref}>
       <h3>{getMessage('experience.title')}</h3>
       <div className="experienceCardsDiv">
-        {CARDS.map(({ descriptionKey, descriptionTextParams, Icon, key }) => (
+        {CARDS.map(({ AdditionalComponent, descriptionKey, descriptionTextParams, Icon, key }) => (
           <ExperienceCard
+            AdditionalComponent={AdditionalComponent}
             customClass={key}
             description={getMessage(descriptionKey, descriptionTextParams)}
             Icon={Icon}

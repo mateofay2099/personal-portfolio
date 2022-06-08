@@ -1,0 +1,30 @@
+.customListItem .mainItem,
+.customListItem .subItem {
+  display: flex;
+  align-items: center;
+}
+
+.customListItem .mainItem .arrowItem {
+  width: 1.5rem;
+  margin: 0 1rem;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 40%,
+    var(--blur) 50%,
+    var(--blur) 60%,
+    transparent 65%,
+    transparent 100%
+  );
+}
+
+.customListItem .subItem {
+  padding-left: 3rem;
+}
+
+.customListItem .subItem .customSubItemArrow {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 1rem;
+  background-color: var(--secondary);
+}
