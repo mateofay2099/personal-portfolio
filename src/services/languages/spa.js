@@ -8,7 +8,7 @@ export default {
   'home.name.introduction': () => 'Hola, soy',
   'home.profession': () => 'Desarrollador Fullstack',
   'home.introduction.description1': ({ age }) =>
-    `Tengo ${age} años. Trabajo en desarrollo de software desde los 19 años, aunque previamente ya había aprendido las bases de programación de forma autodidacta.`,
+    `Tengo ${age} años. Trabajo en desarrollo de software desde los 19, aunque previamente ya había aprendido las bases de programación de forma autodidacta.`,
   'home.introduction.description2': () =>
     'Me encanta lo que hago, y estoy constantemente buscando aprender nuevas tecnologías para incrementar mis conocimientos y mejorar mis habilidades.',
   'home.aboutMe.button': () => 'Acerca de mí',
@@ -41,7 +41,7 @@ export default {
   'experience.card.agile': () =>
     'Gran experiencia trabajando con metodologías ágiles, mayormente scrum. Gracias a la aplicación de fundamentos Agile, puedo asegurar que el cliente tiene una clara noción de todo progreso, estar preparado para cambios en los requerimientos del producto, y siempre priorizar proveer valor para el usuario final.',
   'experience.card.fullstack': () =>
-    'Tengo conocimientos técnicos desde desarrollo frontend web y mobile hasta lógica de backend, diseño y creación de entidades, manejo de bases de datos y deploy en servidores productivos.',
+    'Cuento con conocimientos técnicos desde desarrollo frontend web y mobile hasta lógica de backend, diseño y creación de entidades, manejo de bases de datos y deploy en servidores productivos.',
   'experience.openTechnologies': () => 'Ver lista de tecnologías',
 
   // Courses
@@ -83,7 +83,7 @@ export default {
   'portfolio.title': () => 'Portfolio',
   'portfolio.card.personalPortfolio.title': () => 'Página de portfolio personal',
   'portfolio.card.personalPortfolio.description': () =>
-    'Clickee en la carta para ver el repositorio de Github correspondiente a este sitio web',
+    'Clickee en la carta para ver el repositorio de Github de este sitio web',
 
   // Footer
   'footer.customizeTitle': () => 'No te gusta la página?',

@@ -6,6 +6,12 @@ import internationalIcon from '@myIcons/cards/international.svg';
 import responsiveIcon from '@myIcons/cards/responsive.svg';
 import Courses from '@components/Experience/AdditionalComponents/Courses/Courses';
 import Technologies from '@components/Experience/AdditionalComponents/Technologies/Technologies';
+import GROUPED_COURSES from '@components/Experience/AdditionalComponents/Courses/coursesData';
+
+const coursesCount = GROUPED_COURSES.reduce(
+  (count, platformCourses) => count + platformCourses.courses.length,
+  0
+);
 
 export const CARDS = [
   {
@@ -21,7 +27,7 @@ export const CARDS = [
   {
     AdditionalComponent: Courses,
     descriptionKey: 'experience.card.courses',
-    descriptionTextParams: { coursesCount: 20 },
+    descriptionTextParams: { coursesCount },
     Icon: coursesIcon,
     key: 'experienceCards-courses',
   },

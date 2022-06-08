@@ -8,7 +8,7 @@ export default {
   'home.name.introduction': () => 'Hi, I am',
   'home.profession': () => 'Fullstack Developer',
   'home.introduction.description1': ({ age }) =>
-    `I am ${age} years old. I started working on software development when I was 19 years old, although I had already learned the basics of programming in a self-taught way.`,
+    `I am ${age} years old. I started working on software development when I was 19, although I had already learned the basics of programming in a self-taught way.`,
   'home.introduction.description2': () =>
     'I love what I do and I am constantly looking for learning new technologies and improving my current skills.',
   'home.aboutMe.button': () => 'About Me',
@@ -34,12 +34,12 @@ export default {
   'experience.card.responsive': () =>
     'Vast experience in responsive design. I have developed flexible interfaces that adapt to different screen sizes, to ensure a good user experience regardless the device being used',
   'experience.card.courses': ({ coursesCount } = {}) =>
-    `I am constantly improving my skills, practicing in personal projects, solving algorithms, and taking courses to learn new things. Currently made over ${coursesCount} courses.`,
+    `I am constantly improving my skills, practicing in personal projects, solving algorithms, and taking courses to learn new things. I have currently made over ${coursesCount} courses.`,
   'experience.openCourses': () => 'See courses and certifications',
   'experience.card.excellence': () =>
     'I always aim for excellence. As an unquestionable rule, I always apply best practices to guarantee clean and scalable code, with meticulous tests to avoid error prone code.',
   'experience.card.agile': () =>
-    'Lot of experience working with Agile methodologies, mostly scrum. Thanks to the application of agile fundamentals, I can ensure that the client gets a clear notion of all progress, be prepare for changes in product requirements, and always prioritize providing value to the end user.',
+    'Experienced working with Agile methodologies, mostly scrum. Thanks to the application of agile fundamentals, I can ensure that the client gets a clear notion of all progress, be prepare for changes in product requirements, and always prioritize providing value to the end user.',
   'experience.card.fullstack': () =>
     'I have technical knowledge from web and mobile frontend design to backend logic, entities design and creation, database handling, data security and deployment on productive servers.',
   'experience.openTechnologies': () => 'See list of technologies',
