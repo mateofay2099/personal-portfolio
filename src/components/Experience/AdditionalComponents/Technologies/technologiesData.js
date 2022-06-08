@@ -15,21 +15,23 @@ const TECHNOLOGIES = [
       { description: 'Formik' },
     ],
   },
-  { description: 'Typescript' },
   {
     description: 'React Native',
     subItems: [{ description: 'UI Kitten' }],
   },
-  { description: 'GraphQL' },
-  { description: 'Next.js' },
   {
     description: 'Redux',
     subItems: [{ description: 'Redux-thunk' }, { description: 'Redux-saga' }],
   },
+  { description: 'GraphQL' },
+  { description: 'Next.js' },
+  { description: 'Typescript' },
   {
     description: 'Node.js',
     subItems: [{ description: 'Express' }, { description: 'Sequelize' }],
   },
+  { description: 'Docker' },
+  { description: 'AWS Services' },
   { description: 'PHP', subItems: [{ description: 'Doctrine' }, { description: 'CodeIgniter' }] },
   {
     description: 'Databases',

@@ -7,8 +7,8 @@ import TECHNOLOGIES from './technologiesData';
 import './Technologies.css';
 
 const getListHeightByWidth = (width) => {
-  const possibleHeights = [260, 370, 495];
-  const minWidths = [835, 645, 455];
+  const possibleHeights = [250, 305, 370, 515];
+  const minWidths = [1015, 825, 640, 445];
 
   for (let i = 0; i < minWidths.length; i++) {
     if (width >= minWidths[i]) {
