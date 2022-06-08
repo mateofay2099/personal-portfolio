@@ -17,6 +17,11 @@
 .coursesModal .coursesContainer .platformTitleContainer {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
+}
+
+.coursesModal .coursesContainer .platformTitleContainer:not(:first-child) {
+  margin-top: 2rem;
 }
 
 .coursesModal .coursesContainer .platformTitleContainer img {
@@ -27,7 +32,6 @@
 
 .coursesModal h4 {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
   width: max-content;
   position: relative;
 }
@@ -35,10 +39,6 @@
 .coursesModal h4::after {
   background: linear-gradient(to right, var(--primary), var(--background)) !important;
   width: 60% !important;
-}
-
-.coursesModal .coursesContainer h4:not(:first-child) {
-  margin-top: 2rem;
 }
 
 .coursesModal .customListItem {
