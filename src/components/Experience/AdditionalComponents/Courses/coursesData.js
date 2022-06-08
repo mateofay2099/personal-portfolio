@@ -1,6 +1,7 @@
 const GROUPED_COURSES = [
   {
     title: 'Platzi',
+    key: 'platform-platzi',
     courses: [
       { courseKey: 'courses.platzi.fundamentals' },
       { courseKey: 'courses.platzi.git' },
@@ -24,9 +25,14 @@ const GROUPED_COURSES = [
       { courseKey: 'courses.platzi.next.professional' },
     ],
   },
-  { title: 'Amazon Web Services', courses: [{ courseKey: 'courses.aws.cloudPractitioner' }] },
+  {
+    title: 'Amazon Web Services',
+    key: 'platform-aws',
+    courses: [{ courseKey: 'courses.aws.cloudPractitioner' }],
+  },
   {
     title: 'Pluralsight',
+    key: 'platform-pluralsight',
     courses: [
       { courseKey: 'courses.pluralsight.reactRoleIQ' },
       { courseKey: 'courses.pluralsight.reactNative' },

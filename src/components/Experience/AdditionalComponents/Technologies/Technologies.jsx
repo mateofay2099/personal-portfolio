@@ -18,7 +18,7 @@ const getListHeightByWidth = (width) => {
   return 'auto';
 };
 
-const Technologies = () => {
+const Technologies = ({ cardKey }) => {
   const [showModal, setShowModal] = useState(false);
   const { getMessage } = useLanguageContext();
   const { width } = useWindowDimensions();
@@ -34,7 +34,7 @@ const Technologies = () => {
 
   return (
     <>
-      <p className="clickableText" onClick={openModal}>
+      <p className="clickableText" data-cy={`${cardKey}-additionalComponent`} onClick={openModal}>
         {getMessage('experience.openTechnologies')}
       </p>
       <CustomModal
@@ -42,10 +42,14 @@ const Technologies = () => {
         isOpen={showModal}
         onRequestClose={closeModal}
         showCloseButton>
-        <h3>{getMessage('technologies.title')}</h3>
+        <h3 data-cy="technologiesModal-title">{getMessage('technologies.title')}</h3>
         <ul className="technologiesList" style={{ height: listHeight }}>
-          {TECHNOLOGIES.map(({ description, subItems }) => (
-            <CustomListItem description={description} key={description} subItems={subItems} />
+          {TECHNOLOGIES.map(({ description, subItems }, i) => (
+            <CustomListItem
+              description={description}
+              key={`technologiesListItem-${i}`}
+              subItems={subItems}
+            />
           ))}
         </ul>
       </CustomModal>

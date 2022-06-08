@@ -7,15 +7,15 @@ const CustomListItem = ({ description, subItems }) => {
   const { currentTheme } = useThemeContext();
 
   return (
-    <div className="customListItem">
+    <div className="customListItem" data-cy="customListItem">
       <li className="mainItem">
         <ArrowItem className="arrowItem shimmer" fill={currentTheme.primary} />
         <p>{description}</p>
       </li>
       <ul>
         {subItems &&
-          subItems.map(({ description }) => (
-            <li className="subItem" key={description}>
+          subItems.map(({ description }, i) => (
+            <li className="subItem" data-cy="customListItem-subItem" key={`subItem-${i}`}>
               <div className="customSubItemArrow" />
               <p>{description}</p>
             </li>

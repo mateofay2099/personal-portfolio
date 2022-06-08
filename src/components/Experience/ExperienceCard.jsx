@@ -16,11 +16,11 @@ const ExperienceCard = ({ AdditionalComponent, customClass, description, Icon })
           />
         </ScrollRotate>
       </div>
-      <div className="cardContent">
+      <div className="cardContent" data-cy={`${customClass}-content`}>
         <div className="descriptionDiv">
           <p data-cy="experienceCard-description">{description}</p>
         </div>
-        {AdditionalComponent && <AdditionalComponent />}
+        {AdditionalComponent && <AdditionalComponent cardKey={customClass} />}
       </div>
     </div>
   );
