@@ -32,7 +32,7 @@ export default {
   'experience.card.international': () =>
     'With really good communication skills both in Spanish and in English, I have worked for clients from different countries all around the world. I have currently developed applications for more than 8 countries.',
   'experience.card.responsive': () =>
-    'Vast experience in responsive design. I have developed flexible interfaces that adapt to different screen sizes, to ensure a good user experience regardless the device being used',
+    'Vast experience in responsive design. I have developed flexible interfaces that adapt to different screen sizes, to ensure a good user experience regardless the device being used.',
   'experience.card.courses': ({ coursesCount } = {}) =>
     `I am constantly improving my skills, practicing in personal projects, solving algorithms, and taking courses to learn new things. I have currently made over ${coursesCount} courses.`,
   'experience.openCourses': () => 'See courses and certifications',
@@ -64,9 +64,13 @@ export default {
   'courses.platzi.npm': () => 'Management of packages and dependencies with NPM',
   'courses.platzi.node': () => 'Node.js Fundamentals',
   'courses.platzi.webpack': () => 'Webpack',
+  'courses.platzi.react.introduction': () => 'Introduction to React.js',
   'courses.platzi.react.practical': () => 'React.js Practical Course',
+  'courses.platzi.react.renderPatterns': () => 'React.js: Render Patterns and Composition',
+  'courses.platzi.react.stateManagement': () => 'React.js: Professional State Management',
   'courses.platzi.next.practical': () => 'Next.js Practical Course',
   'courses.platzi.next.professional': () => 'Professional Next.js',
+
   'courses.pluralsight.reactRoleIQ': () => 'Expert level RoleIQ - React Web Developer',
   'courses.pluralsight.reactNative': () => 'Path - Build Mobile Applications With React Native',
   'courses.pluralsight.buildingWebApps': () => 'Building Web Applications With React',

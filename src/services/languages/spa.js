@@ -22,7 +22,7 @@ export default {
     'He vivido en Campana toda mi vida, una ciudad al norte de la provincia de Buenos Aires, Argentina. Gracias al auge del teletrabajo ahora puedo trabajar desde cualquier lugar, algo de lo que pienso sacar ventaja en un futuro cercano. Aunque estoy muy a gusto trabajando de esta forma, también estaría dispuesto a volver a las oficinas en un nuevo país. Esto se debe a un deseo personal de asentarme en un nuevo e interesante lugar.',
   'home.aboutMeModal.hobbies.title': () => 'Hobbies',
   'home.aboutMeModal.hobbies.description': () =>
-    'Además de programar, en mi tiempo libre me gusta juntarme con amigos, tocar la guitarra, ir al gimnasio, y pasar tiempo en casa con mis dos hermosos gatos. También me gusta mucho cocinar, mayormente cosas saladas, pero ocasionalmente disfruto de hacer una torta o algo dulce',
+    'Además de programar, en mi tiempo libre me gusta juntarme con amigos, tocar la guitarra, ir al gimnasio, y pasar tiempo en casa con mis dos hermosos gatos. También me gusta mucho cocinar, mayormente cosas saladas, pero ocasionalmente disfruto de hacer una torta o algo dulce.',
   'home.aboutMeModal.longTermPlan.title': () => 'Plan a futuro',
   'home.aboutMeModal.longTermPlan.description': () =>
     'Aunque actualmente estoy trabajando como desarrollador fullstack, en el futuro me interesa dedicarme al mundo de data science y machine learning. Encuentro esta área muy interesante, y extremadamente importante en el futuro de la tecnología.',
@@ -64,9 +64,13 @@ export default {
   'courses.platzi.npm': () => 'Gestión de Dependencias y Paquetes con NPM',
   'courses.platzi.node': () => 'Fundamentos de Node.js',
   'courses.platzi.webpack': () => 'Webpack',
+  'courses.platzi.react.introduction': () => 'Introducción a React.js',
   'courses.platzi.react.practical': () => 'Curso práctico de React.js',
+  'courses.platzi.react.renderPatterns': () => 'React.js: Patrones de Render y Composición',
+  'courses.platzi.react.stateManagement': () => 'React.js: Manejo Profesional del Estado',
   'courses.platzi.next.practical': () => 'Curso práctico de Next.js',
   'courses.platzi.next.professional': () => 'Curso profesional de Next.js',
+
   'courses.pluralsight.reactRoleIQ': () => 'RoleIQ nivel Experto - Desarollador Web React',
   'courses.pluralsight.reactNative': () =>
     'Path - Construyendo aplicaciones móviles con React Native',
