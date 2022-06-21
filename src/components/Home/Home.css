@@ -5,6 +5,7 @@
 .fullHome {
   display: flex;
   min-height: 95vh;
+  height: 65rem;
 }
 
 .homeWithNavbar nav {

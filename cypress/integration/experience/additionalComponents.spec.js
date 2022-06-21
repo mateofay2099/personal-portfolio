@@ -32,6 +32,10 @@ describe('Experience Cards - Additional Components tests', () => {
   });
 
   describe('Courses and Certifications additional component', () => {
+    beforeEach(() => {
+      cy.viewport(1920, 1080);
+    });
+
     it('Should show modal when clicking on additional component', () => {
       cy.visit('/');
       cy.get(selectors.coursesAdditionalComponent).click();
@@ -82,6 +86,10 @@ describe('Experience Cards - Additional Components tests', () => {
   });
 
   describe('Technologies additional component', () => {
+    beforeEach(() => {
+      cy.viewport(1920, 1080);
+    });
+
     it('Should show modal when clicking on additional component', () => {
       cy.visit('/');
       cy.get(selectors.technologiesAdditionalComponent).click();

@@ -45,9 +45,9 @@
   margin-bottom: 1rem;
 }
 
-@media (min-width: 986px) {
+@media (min-width: 1058px) {
   .coursesModal .coursesContainer {
-    height: 63rem;
+    height: 67rem;
   }
   .coursesModal .customListItem {
     width: calc(50% - 3rem);
