@@ -29,7 +29,7 @@ In case you are interested in cloning this project and investigate it or play wi
 ```
 > Output: `/dist` folder
 
-- To run tests:
+- To run tests locally (App should be up and running on default port 3006):
 
 ```bash
     npm run test
