@@ -19,13 +19,13 @@ export default {
 
   'home.aboutMeModal.location.title': () => 'Location',
   'home.aboutMeModal.location.description': () =>
-    'I have lived in Campana my whole life, a city in the north of Buenos Aires, Argentina. Thanks to the rise of remote work, I am now able to work from wherever I want, something that I am planning to take advantage of in the near future. Although I am really comfortable with this way of working, I would also be willing to work in an office in another country, because I would really like to settle in a new interesting place.',
+    "I have lived in Campana since I was born, a city in the north of Buenos Aires, Argentina. Thanks to the rise of remote work, I've had the opportunity to work for really big and important companies from the confort of my home. Although I was really comfortable with this way of working, by the end of 2022 I decided to move to Germany to have new experiences and broaden my horizons, as well as take the opportunity to get to know a new culture, which I consider to be really beneficial for personal growth.",
   'home.aboutMeModal.hobbies.title': () => 'Hobbies',
   'home.aboutMeModal.hobbies.description': () =>
     'Besides programming, in my free time I like to hang out with friends, play the guitar, go to the gym and spend some time at home with my two beautiful cats. I also really like to cook, especially meals, but every now and then I enjoy baking a cake.',
   'home.aboutMeModal.longTermPlan.title': () => 'Long term plan',
   'home.aboutMeModal.longTermPlan.description': () =>
-    'Although I am currently working as a fullstack developer, in the future I would like to move on to data science and machine learning. I find this area really interesting, and extremely important in the future of technology.',
+    'Although I am currently working as a frontend developer, in the future I would like to move on to data science and machine learning. I find this area really interesting, and extremely important in the future of technology.',
 
   // Experience
   'experience.title': () => 'Experience',
@@ -91,6 +91,7 @@ export default {
   // Footer
   'footer.customizeTitle': () => 'Do not like the page?',
   'footer.customizeButton': () => 'Customize it',
+  'footer.contactTitle': () => "Let's stay in touch!",
   'footer.customizableOption.primary': () => 'Primary',
   'footer.customizableOption.secondary': () => 'Secondary',
   'footer.customizableOption.background': () => 'Background',

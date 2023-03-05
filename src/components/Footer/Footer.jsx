@@ -7,7 +7,7 @@ import githubLogo from '@gifs/githubLogo.gif';
 import CustomizeModal from './CustomizeModal';
 import './Footer.css';
 
-const mail = 'mateofay2099@gmail.com';
+const MAIL = 'mateofay2099@gmail.com';
 
 export const contactOptions = [
   {
@@ -18,14 +18,14 @@ export const contactOptions = [
   },
   {
     className: 'gmailLogo',
-    displayName: mail,
-    href: `mailto:${mail}`,
+    displayName: MAIL,
+    href: `mailto:${MAIL}`,
     logo: gmailLogo,
   },
   {
     className: 'wspLogo',
-    displayName: '(+54)3489667423',
-    href: 'https://wa.me/5493489667423',
+    displayName: '(+49)15121727382',
+    href: 'https://wa.me/4915121727382',
     logo: wspLogo,
   },
   {
@@ -44,7 +44,7 @@ const Footer = () => {
     <footer data-cy="footer">
       <div className="contact">
         <div className="contactTitle">
-          <h5>Let&apos;s stay in touch!</h5>
+          <h5>{getMessage('footer.contactTitle')}</h5>
         </div>
         <div className="contactOptions">
           {contactOptions.map(({ className, displayName, href, logo }) => (

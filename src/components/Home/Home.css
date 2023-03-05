@@ -59,6 +59,7 @@
 }
 
 .homeWithNavbar nav .navBarOptions {
+  visibility: hidden;
   height: 20rem;
   width: 100%;
   position: absolute;
@@ -74,6 +75,7 @@
 }
 
 .homeWithNavbar nav .navBarOptions.active {
+  visibility: visible;
   transform: translateY(100%);
 }
 
