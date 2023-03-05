@@ -164,6 +164,7 @@
   }
 
   .homeWithNavbar nav .navBarOptions {
+    visibility: visible;
     padding: var(--custom-padding);
     position: static;
     flex-direction: row;
